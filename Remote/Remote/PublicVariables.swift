@@ -9,4 +9,6 @@
 import Foundation
 class PublicVariable{
     static var degree:Int = 22
+    static var chooseButton = 0
+    static var arrDisplaytext = ["LIGHT","ON/OFF","MODE","WIND","M.SWING","A.SWING","F.COOL","TIME ON", "TIME OFF","F.HEAT","SET","CLOCK","OK"]
 }

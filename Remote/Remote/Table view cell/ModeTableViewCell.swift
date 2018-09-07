@@ -15,57 +15,47 @@ class ModeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var ibUpButton: UIButton!
     @IBOutlet weak var ibDownButton: UIButton!
+    @IBOutlet var ibGroupButtons: [UIButton]!
     
-    @IBAction func ibTapUpButton(_ sender: Any) {
+    @IBAction func ibTouchButton(_ sender: UIButton) {
+        print(sender)
         let Transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         UIView.animate(withDuration: 0.05, animations: {
-            self.ibUpButton.transform = Transform
+            sender.transform = Transform
         },
-        completion:
+                       completion:
             {_ in
-                self.ibUpButton.transform = CGAffineTransform.identity
-                if PublicVariable.degree < 27
-                {
-                    PublicVariable.degree = PublicVariable.degree + 1
-                    print("Now, degree is \(PublicVariable.degree) ℃")
-                    let rootView = self.window?.rootViewController as! ViewController
-                    rootView.ibMainTableView.reloadData()
-                }else{
-                    print("Do nothing")
+                switch sender{
+                case self.ibModeButton:
+                    PublicVariable.chooseButton = 3
+                case self.ibWindButton:
+                    PublicVariable.chooseButton = 4
+                case self.ibUpButton:
+                    if PublicVariable.degree < 27
+                    {
+                        PublicVariable.degree = PublicVariable.degree + 1
+                    }
+                default:
+                    if PublicVariable.degree > 17
+                    {
+                        PublicVariable.degree = PublicVariable.degree - 1
+                    }
                 }
-        })
-        
-        
-    }
-    @IBAction func ibTapDownButton(_ sender: Any) {
-        let Transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        UIView.animate(withDuration: 0.05, animations: {
-            self.ibDownButton.transform = Transform
-        },
-        completion:
-            {_ in
-                self.ibDownButton.transform = CGAffineTransform.identity
-                if PublicVariable.degree > 17
-                {
-                    PublicVariable.degree = PublicVariable.degree - 1
-                    print("Now, degree is \(PublicVariable.degree) ℃")
-                    let rootView = self.window?.rootViewController as! ViewController
-                    rootView.ibMainTableView.reloadData()
-                }else{
-                    print("Do nothing")
-                }
+                sender.transform = CGAffineTransform.identity
+                let rootView = self.window?.rootViewController as! ViewController
+                rootView.ibMainTableView.reloadData()
+                
+                
         })
     }
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        ibModeButton.layer.cornerRadius =  20
-        ibWindButton.layer.cornerRadius =  20
-        ibUpButton.layer.cornerRadius =  20
-        ibDownButton.layer.cornerRadius =  20
-        supportUI.setShadowForButton(ibUpButton)
-        supportUI.setShadowForButton(ibDownButton)
-        supportUI.setShadowForButton(ibModeButton)
-        supportUI.setShadowForButton(ibWindButton)
+        ibModeButton.layer.cornerRadius =  22
+        ibWindButton.layer.cornerRadius =  22
+        ibUpButton.layer.cornerRadius =  22
+        ibDownButton.layer.cornerRadius =  22
+         SupportUI.setShadowForButtons(ibGroupButtons)
         
         ibUpButton.imageView?.contentMode = .scaleAspectFit
         ibDownButton.imageView?.contentMode = .scaleAspectFit

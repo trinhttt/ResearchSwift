@@ -39,24 +39,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dh-Pf-8n0">
-                                                    <rect key="frame" x="8" y="8" width="304" height="196"/>
+                                                    <rect key="frame" x="20" y="8" width="335" height="196"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfv-YO-cWp">
-                                                            <rect key="frame" x="35" y="34" width="234" height="128"/>
+                                                            <rect key="frame" x="45" y="34" width="245" height="128"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degree" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UH8-hf-5Pi">
-                                                            <rect key="frame" x="34.5" y="80.5" width="234" height="35"/>
+                                                            <rect key="frame" x="44.5" y="80.5" width="245" height="35"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVN-HM-jMp">
-                                                            <rect key="frame" x="194" y="126" width="50" height="0.0"/>
+                                                            <rect key="frame" x="225" y="126" width="50" height="0.0"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="QuR-pm-TDb"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -64,10 +64,10 @@
                                                     <color key="backgroundColor" red="0.9220369170984456" green="0.9220369170984456" blue="0.9220369170984456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="UH8-hf-5Pi" firstAttribute="centerX" secondItem="gfv-YO-cWp" secondAttribute="centerX" id="0gp-IH-BTb"/>
-                                                        <constraint firstItem="gfv-YO-cWp" firstAttribute="leading" secondItem="5dh-Pf-8n0" secondAttribute="leading" constant="35" id="3xL-Wb-Neq"/>
+                                                        <constraint firstItem="gfv-YO-cWp" firstAttribute="leading" secondItem="5dh-Pf-8n0" secondAttribute="leading" constant="45" id="3xL-Wb-Neq"/>
                                                         <constraint firstItem="UH8-hf-5Pi" firstAttribute="width" secondItem="gfv-YO-cWp" secondAttribute="width" id="A0F-2C-6Ty"/>
                                                         <constraint firstAttribute="bottom" secondItem="aVN-HM-jMp" secondAttribute="bottom" constant="70" id="LiF-s6-CIT"/>
-                                                        <constraint firstAttribute="trailing" secondItem="gfv-YO-cWp" secondAttribute="trailing" constant="35" id="O2k-YH-FGy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gfv-YO-cWp" secondAttribute="trailing" constant="45" id="O2k-YH-FGy"/>
                                                         <constraint firstItem="gfv-YO-cWp" firstAttribute="top" secondItem="5dh-Pf-8n0" secondAttribute="top" constant="34" id="RSl-zl-59F"/>
                                                         <constraint firstAttribute="trailing" secondItem="aVN-HM-jMp" secondAttribute="trailing" constant="60" id="jwd-hz-Twj"/>
                                                         <constraint firstAttribute="bottom" secondItem="gfv-YO-cWp" secondAttribute="bottom" constant="34" id="n9W-ei-ITt"/>
@@ -75,25 +75,25 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 in 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9n-tb-mxz">
-                                                    <rect key="frame" x="0.0" y="10" width="320" height="16"/>
+                                                    <rect key="frame" x="0.0" y="10" width="375" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIVERSAL A/C REMOTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4v-k0-0Lo">
-                                                    <rect key="frame" x="0.0" y="26" width="320" height="17"/>
+                                                    <rect key="frame" x="0.0" y="26" width="375" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K - 1028E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXo-Ak-6vI">
-                                                    <rect key="frame" x="0.0" y="170" width="320" height="16"/>
+                                                    <rect key="frame" x="0.0" y="170" width="375" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIVERSAL A/C REMOTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4S-SJ-6oe">
-                                                    <rect key="frame" x="0.0" y="183" width="320" height="17"/>
+                                                    <rect key="frame" x="0.0" y="183" width="375" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -102,7 +102,7 @@
                                             <constraints>
                                                 <constraint firstItem="EXo-Ak-6vI" firstAttribute="leading" secondItem="t4S-SJ-6oe" secondAttribute="leading" id="20V-2B-o7E"/>
                                                 <constraint firstItem="t4S-SJ-6oe" firstAttribute="leading" secondItem="mJH-NB-Q3h" secondAttribute="leading" id="358-ua-IPr"/>
-                                                <constraint firstItem="5dh-Pf-8n0" firstAttribute="leading" secondItem="mJH-NB-Q3h" secondAttribute="leading" constant="8" id="5QB-x0-Ex6"/>
+                                                <constraint firstItem="5dh-Pf-8n0" firstAttribute="leading" secondItem="mJH-NB-Q3h" secondAttribute="leading" constant="20" id="5QB-x0-Ex6"/>
                                                 <constraint firstItem="U4v-k0-0Lo" firstAttribute="centerX" secondItem="H9n-tb-mxz" secondAttribute="centerX" id="9GH-QH-AKU"/>
                                                 <constraint firstAttribute="bottom" secondItem="5dh-Pf-8n0" secondAttribute="bottom" constant="8" id="9on-rV-gN6"/>
                                                 <constraint firstItem="EXo-Ak-6vI" firstAttribute="centerX" secondItem="gfv-YO-cWp" secondAttribute="centerX" id="FnD-3w-Zml"/>
@@ -110,7 +110,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="t4S-SJ-6oe" secondAttribute="trailing" id="Sdh-kM-Hhf"/>
                                                 <constraint firstAttribute="bottom" secondItem="t4S-SJ-6oe" secondAttribute="bottom" constant="12" id="SwV-D3-8dv"/>
                                                 <constraint firstItem="U4v-k0-0Lo" firstAttribute="leading" secondItem="H9n-tb-mxz" secondAttribute="leading" id="Uwy-Rp-sAi"/>
-                                                <constraint firstAttribute="trailing" secondItem="5dh-Pf-8n0" secondAttribute="trailing" constant="8" id="aEI-4D-HdK"/>
+                                                <constraint firstAttribute="trailing" secondItem="5dh-Pf-8n0" secondAttribute="trailing" constant="20" id="aEI-4D-HdK"/>
                                                 <constraint firstItem="U4v-k0-0Lo" firstAttribute="top" secondItem="H9n-tb-mxz" secondAttribute="bottom" id="aZq-20-4cY"/>
                                                 <constraint firstItem="EXo-Ak-6vI" firstAttribute="trailing" secondItem="t4S-SJ-6oe" secondAttribute="trailing" id="l9d-vv-241"/>
                                                 <constraint firstAttribute="trailing" secondItem="U4v-k0-0Lo" secondAttribute="trailing" id="t3Y-hp-J4W"/>
@@ -139,7 +139,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMc-pg-0Rz">
-                                                    <rect key="frame" x="288" y="2" width="52" height="52"/>
+                                                    <rect key="frame" x="283" y="2" width="52" height="52"/>
                                                     <color key="backgroundColor" red="0.69272806518427166" green="0.86754141168890841" blue="0.58940149654512763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="iMc-pg-0Rz" secondAttribute="height" multiplier="1:1" id="ihb-eF-Rad"/>
@@ -147,9 +147,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
                                                     <state key="normal" image="ic_OnOff"/>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Goy-bA-YRA" eventType="touchUpInside" id="rO4-zi-yVR"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqD-QF-k8O">
-                                                    <rect key="frame" x="35" y="2" width="52" height="52"/>
+                                                    <rect key="frame" x="40" y="2" width="52" height="52"/>
                                                     <color key="backgroundColor" red="0.90944612629999999" green="1" blue="0.3128776727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="QqD-QF-k8O" secondAttribute="height" multiplier="1:1" id="auR-AK-gBJ"/>
@@ -158,11 +161,14 @@
                                                     <state key="normal" image="ic_Light">
                                                         <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Goy-bA-YRA" eventType="touchUpInside" id="tlk-LU-77f"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="QqD-QF-k8O" firstAttribute="leading" secondItem="vJD-Ze-ArI" secondAttribute="leading" constant="35" id="9S5-QK-EQD"/>
-                                                <constraint firstAttribute="trailing" secondItem="iMc-pg-0Rz" secondAttribute="trailing" constant="35" id="BbW-lV-tp3"/>
+                                                <constraint firstItem="QqD-QF-k8O" firstAttribute="leading" secondItem="vJD-Ze-ArI" secondAttribute="leading" constant="40" id="9S5-QK-EQD"/>
+                                                <constraint firstAttribute="trailing" secondItem="iMc-pg-0Rz" secondAttribute="trailing" constant="40" id="BbW-lV-tp3"/>
                                                 <constraint firstItem="QqD-QF-k8O" firstAttribute="top" secondItem="vJD-Ze-ArI" secondAttribute="top" constant="2" id="Eew-pc-IiP"/>
                                                 <constraint firstItem="iMc-pg-0Rz" firstAttribute="width" secondItem="QqD-QF-k8O" secondAttribute="width" id="HEq-JM-TJI"/>
                                                 <constraint firstItem="iMc-pg-0Rz" firstAttribute="top" secondItem="vJD-Ze-ArI" secondAttribute="top" constant="2" id="HUN-SJ-oAL"/>
@@ -174,6 +180,8 @@
                                         <connections>
                                             <outlet property="ibLightBnt" destination="QqD-QF-k8O" id="1uK-LG-5Nh"/>
                                             <outlet property="ibOnOffBnt" destination="iMc-pg-0Rz" id="X0C-Qr-7TJ"/>
+                                            <outletCollection property="ibGroupButtons" destination="QqD-QF-k8O" collectionClass="NSMutableArray" id="ghr-r9-cqm"/>
+                                            <outletCollection property="ibGroupButtons" destination="iMc-pg-0Rz" collectionClass="NSMutableArray" id="F5F-tg-dRm"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModeTableViewCell" rowHeight="112" id="IbX-aD-Fpq" customClass="ModeTableViewCell" customModule="Remote" customModuleProvider="target">
@@ -184,16 +192,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhn-fc-XK1">
-                                                    <rect key="frame" x="40" y="24" width="42.5" height="64"/>
+                                                    <rect key="frame" x="45" y="23" width="42.5" height="64"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="bhn-fc-XK1" secondAttribute="height" multiplier="2:3" id="MU4-nz-beU"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
                                                     <state key="normal" image="ic_Mode"/>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="Kgz-ev-Ghf"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-cS-w5l">
-                                                    <rect key="frame" x="134" y="5" width="107" height="53.5"/>
+                                                    <rect key="frame" x="140.5" y="5" width="94" height="47"/>
                                                     <color key="backgroundColor" red="0.72940382544116833" green="0.79606541450777202" blue="0.19751396307628336" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="T9n-cS-w5l" secondAttribute="height" multiplier="2:1" id="yac-gu-o22"/>
@@ -201,44 +212,47 @@
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
                                                     <state key="normal" image="ic_Up"/>
                                                     <connections>
-                                                        <action selector="ibTapUpButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="W7x-Xx-v7Z"/>
+                                                        <action selector="ibTouchButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="jiq-Qi-MhK"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MODE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3w-So-86z">
-                                                    <rect key="frame" x="41.5" y="92" width="38.5" height="16"/>
+                                                    <rect key="frame" x="46.5" y="91" width="38.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIND" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDM-E0-Aaq">
-                                                    <rect key="frame" x="296" y="92" width="35" height="16"/>
+                                                    <rect key="frame" x="291" y="91" width="35" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dw-vP-gUh">
-                                                    <rect key="frame" x="292.5" y="24" width="42.5" height="64"/>
+                                                    <rect key="frame" x="287.5" y="23" width="42.5" height="64"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
                                                     <state key="normal" image="ic_Wind"/>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="Eyo-G4-vLc"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSb-f8-J61">
-                                                    <rect key="frame" x="134" y="53.5" width="107" height="53.5"/>
+                                                    <rect key="frame" x="140.5" y="60" width="94" height="47"/>
                                                     <color key="backgroundColor" red="0.72940382540000004" green="0.79606541450000001" blue="0.1975139631" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="4"/>
                                                     <state key="normal" image="ic_Down"/>
                                                     <connections>
-                                                        <action selector="ibTapDownButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="fu9-Mk-Zb1"/>
+                                                        <action selector="ibTouchButton:" destination="IbX-aD-Fpq" eventType="touchUpInside" id="Xql-Fw-Yuk"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIGHT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61O-hO-4kX">
-                                                    <rect key="frame" x="42.5" y="4" width="38.5" height="16"/>
+                                                    <rect key="frame" x="47.5" y="3" width="38.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON/OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgo-RR-G2S">
-                                                    <rect key="frame" x="289.5" y="4" width="48.5" height="16"/>
+                                                    <rect key="frame" x="284.5" y="3" width="48.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -248,9 +262,9 @@
                                                 <constraint firstItem="8dw-vP-gUh" firstAttribute="height" secondItem="bhn-fc-XK1" secondAttribute="height" id="8PY-3j-B1C"/>
                                                 <constraint firstItem="h3w-So-86z" firstAttribute="top" secondItem="bhn-fc-XK1" secondAttribute="bottom" constant="4" id="8m7-e2-ijX"/>
                                                 <constraint firstItem="FSb-f8-J61" firstAttribute="height" secondItem="T9n-cS-w5l" secondAttribute="height" id="9mJ-iD-YQI"/>
-                                                <constraint firstItem="bhn-fc-XK1" firstAttribute="leading" secondItem="qtN-dc-DzM" secondAttribute="leading" constant="40" id="9p8-d7-zel"/>
+                                                <constraint firstItem="bhn-fc-XK1" firstAttribute="leading" secondItem="qtN-dc-DzM" secondAttribute="leading" constant="45" id="9p8-d7-zel"/>
                                                 <constraint firstItem="bhn-fc-XK1" firstAttribute="top" secondItem="61O-hO-4kX" secondAttribute="bottom" constant="4" id="AYc-NR-5IL"/>
-                                                <constraint firstAttribute="trailing" secondItem="8dw-vP-gUh" secondAttribute="trailing" constant="40" id="GM5-bs-9CH"/>
+                                                <constraint firstAttribute="trailing" secondItem="8dw-vP-gUh" secondAttribute="trailing" constant="45" id="GM5-bs-9CH"/>
                                                 <constraint firstItem="FSb-f8-J61" firstAttribute="trailing" secondItem="T9n-cS-w5l" secondAttribute="trailing" id="GVi-QW-WFW"/>
                                                 <constraint firstItem="8dw-vP-gUh" firstAttribute="top" secondItem="bhn-fc-XK1" secondAttribute="top" id="KFG-QE-y0Q"/>
                                                 <constraint firstItem="61O-hO-4kX" firstAttribute="centerX" secondItem="bhn-fc-XK1" secondAttribute="centerX" id="RK9-eo-QRJ"/>
@@ -268,14 +282,18 @@
                                         <constraints>
                                             <constraint firstItem="T9n-cS-w5l" firstAttribute="centerX" secondItem="IbX-aD-Fpq" secondAttribute="centerX" id="P74-xa-fNp"/>
                                             <constraint firstItem="bhn-fc-XK1" firstAttribute="height" secondItem="IbX-aD-Fpq" secondAttribute="height" multiplier="4:7" id="knC-cI-hX9"/>
-                                            <constraint firstItem="bhn-fc-XK1" firstAttribute="centerY" secondItem="IbX-aD-Fpq" secondAttribute="centerY" id="vC8-5B-Ehm"/>
-                                            <constraint firstItem="T9n-cS-w5l" firstAttribute="width" secondItem="IbX-aD-Fpq" secondAttribute="width" multiplier="2:7" id="yu3-x4-0Oz"/>
+                                            <constraint firstItem="bhn-fc-XK1" firstAttribute="centerY" secondItem="IbX-aD-Fpq" secondAttribute="centerY" constant="-1" id="vC8-5B-Ehm"/>
+                                            <constraint firstItem="T9n-cS-w5l" firstAttribute="width" secondItem="IbX-aD-Fpq" secondAttribute="width" multiplier="2:8" id="yu3-x4-0Oz"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ibDownButton" destination="FSb-f8-J61" id="MaX-eW-qlY"/>
                                             <outlet property="ibModeButton" destination="bhn-fc-XK1" id="VZP-2x-U4l"/>
                                             <outlet property="ibUpButton" destination="T9n-cS-w5l" id="Qdn-wj-GiG"/>
                                             <outlet property="ibWindButton" destination="8dw-vP-gUh" id="5Jz-4q-VpU"/>
+                                            <outletCollection property="ibGroupButtons" destination="bhn-fc-XK1" collectionClass="NSMutableArray" id="9zq-6G-FCT"/>
+                                            <outletCollection property="ibGroupButtons" destination="T9n-cS-w5l" collectionClass="NSMutableArray" id="DfT-j4-9H8"/>
+                                            <outletCollection property="ibGroupButtons" destination="8dw-vP-gUh" collectionClass="NSMutableArray" id="385-k1-uuG"/>
+                                            <outletCollection property="ibGroupButtons" destination="FSb-f8-J61" collectionClass="NSMutableArray" id="Biw-9c-CzA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StyleTableViewCell" rowHeight="65" id="Hhc-HT-SSI" customClass="StyleTableViewCell" customModule="Remote" customModuleProvider="target">
@@ -286,34 +304,43 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifm-RE-D2P">
-                                                    <rect key="frame" x="35" y="8" width="55.5" height="37"/>
+                                                    <rect key="frame" x="35" y="7" width="75" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ifm-RE-D2P" secondAttribute="height" multiplier="3:2" id="Nh8-gI-P9h"/>
+                                                        <constraint firstAttribute="width" secondItem="ifm-RE-D2P" secondAttribute="height" multiplier="1.9" id="Nh8-gI-P9h"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <state key="normal" title="MS">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Hhc-HT-SSI" eventType="touchUpInside" id="kcX-v0-SgS"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VB5-Cm-VWI">
-                                                    <rect key="frame" x="159.5" y="8" width="56" height="37"/>
+                                                    <rect key="frame" x="150" y="7" width="75.5" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <state key="normal" title="AS">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Hhc-HT-SSI" eventType="touchUpInside" id="aDF-Ia-cuT"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJQ-X7-YZN">
-                                                    <rect key="frame" x="284.5" y="8" width="55.5" height="37"/>
+                                                    <rect key="frame" x="265" y="7" width="75" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <state key="normal" title="F.Cool">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Hhc-HT-SSI" eventType="touchUpInside" id="Dza-lH-Bpp"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M.SWING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NB7-CV-QE9">
-                                                    <rect key="frame" x="30" y="48.5" width="58.5" height="16"/>
+                                                    <rect key="frame" x="30" y="48.5" width="85" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -338,49 +365,59 @@
                                                 <constraint firstItem="mJQ-X7-YZN" firstAttribute="bottom" secondItem="VB5-Cm-VWI" secondAttribute="bottom" id="jUL-9u-Y2j"/>
                                                 <constraint firstItem="mJQ-X7-YZN" firstAttribute="top" secondItem="VB5-Cm-VWI" secondAttribute="top" id="pKz-Uw-31c"/>
                                                 <constraint firstItem="VB5-Cm-VWI" firstAttribute="height" secondItem="ifm-RE-D2P" secondAttribute="height" id="tHq-y5-Zgg"/>
+                                                <constraint firstItem="NB7-CV-QE9" firstAttribute="centerX" secondItem="ifm-RE-D2P" secondAttribute="centerX" id="w0l-FL-3SF"/>
                                                 <constraint firstItem="mJQ-X7-YZN" firstAttribute="height" secondItem="VB5-Cm-VWI" secondAttribute="height" id="wtm-WD-kZg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
+                                            <constraint firstItem="ifm-RE-D2P" firstAttribute="width" secondItem="Hhc-HT-SSI" secondAttribute="width" multiplier="1:5" id="0Ai-XL-8Pq"/>
                                             <constraint firstItem="VB5-Cm-VWI" firstAttribute="centerY" secondItem="Hhc-HT-SSI" secondAttribute="centerY" constant="-6" id="XIR-Na-wkh"/>
                                             <constraint firstItem="VB5-Cm-VWI" firstAttribute="centerX" secondItem="Hhc-HT-SSI" secondAttribute="centerX" id="any-5S-peV"/>
                                             <constraint firstItem="ifm-RE-D2P" firstAttribute="centerY" secondItem="Hhc-HT-SSI" secondAttribute="centerY" constant="-6" id="oQP-su-s2a"/>
-                                            <constraint firstItem="ifm-RE-D2P" firstAttribute="height" secondItem="Hhc-HT-SSI" secondAttribute="height" multiplier="4:7" id="sJB-uU-FUp"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ibASwingButton" destination="VB5-Cm-VWI" id="SuL-v8-ppr"/>
                                             <outlet property="ibFCoolButton" destination="mJQ-X7-YZN" id="Ytb-PY-5Sg"/>
                                             <outlet property="ibMSwingButton" destination="ifm-RE-D2P" id="jbu-RK-smh"/>
+                                            <outletCollection property="ibGroupButtons" destination="ifm-RE-D2P" collectionClass="NSMutableArray" id="WlU-it-aOw"/>
+                                            <outletCollection property="ibGroupButtons" destination="VB5-Cm-VWI" collectionClass="NSMutableArray" id="ea6-6H-2C3"/>
+                                            <outletCollection property="ibGroupButtons" destination="mJQ-X7-YZN" collectionClass="NSMutableArray" id="a9B-cg-JO5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeTableViewCell" rowHeight="58" id="Wzy-Zr-RER" customClass="TimeTableViewCell" customModule="Remote" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="475" width="375" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeTableViewCell" rowHeight="110" id="Wzy-Zr-RER" customClass="TimeTableViewCell" customModule="Remote" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="475" width="375" height="110"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wzy-Zr-RER" id="kZl-uC-yRm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voc-VY-1cV">
-                                                    <rect key="frame" x="162.5" y="12" width="50" height="33"/>
+                                                    <rect key="frame" x="150" y="35" width="75.5" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <state key="normal" title="TIME OFF">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Wzy-Zr-RER" eventType="touchUpInside" id="3lV-PJ-XII"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orN-YN-sp4">
-                                                    <rect key="frame" x="290.5" y="12" width="49.5" height="33"/>
+                                                    <rect key="frame" x="265" y="35" width="75" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <state key="normal" title="F.Heat">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Wzy-Zr-RER" eventType="touchUpInside" id="gET-TV-lCb"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPF-cu-rE7">
-                                                    <rect key="frame" x="35" y="12.5" width="49.5" height="33"/>
+                                                    <rect key="frame" x="35" y="35.5" width="75" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="ZPF-cu-rE7" secondAttribute="height" multiplier="3:2" id="KVJ-i2-quE"/>
+                                                        <constraint firstAttribute="width" secondItem="ZPF-cu-rE7" secondAttribute="height" multiplier="1.9" id="KVJ-i2-quE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <state key="normal" title="TIME ON">
@@ -391,6 +428,9 @@
                                                             <integer key="value" value="20"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="Wzy-Zr-RER" eventType="touchUpInside" id="DUX-6z-Hjo"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -405,41 +445,50 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="ZPF-cu-rE7" firstAttribute="height" secondItem="Wzy-Zr-RER" secondAttribute="height" multiplier="4:7" id="8Jx-tS-A77"/>
                                             <constraint firstItem="voc-VY-1cV" firstAttribute="centerX" secondItem="Wzy-Zr-RER" secondAttribute="centerX" id="9kT-CK-1XE"/>
                                             <constraint firstItem="ZPF-cu-rE7" firstAttribute="centerY" secondItem="Wzy-Zr-RER" secondAttribute="centerY" id="v8l-OB-ZZS"/>
+                                            <constraint firstItem="ZPF-cu-rE7" firstAttribute="width" secondItem="Wzy-Zr-RER" secondAttribute="width" multiplier="1:5" id="yIw-Ld-JnL"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ibFHeatButton" destination="orN-YN-sp4" id="EM6-2s-gKI"/>
                                             <outlet property="ibTimeOffButton" destination="voc-VY-1cV" id="v6V-7J-c1A"/>
                                             <outlet property="ibTimeOnButton" destination="ZPF-cu-rE7" id="xDQ-hK-LIX"/>
+                                            <outletCollection property="ibGroupButtons" destination="ZPF-cu-rE7" collectionClass="NSMutableArray" id="e7O-8o-CX6"/>
+                                            <outletCollection property="ibGroupButtons" destination="voc-VY-1cV" collectionClass="NSMutableArray" id="hYx-M2-fuS"/>
+                                            <outletCollection property="ibGroupButtons" destination="orN-YN-sp4" collectionClass="NSMutableArray" id="MUt-sj-5wR"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetTableViewCell" rowHeight="61" id="2MQ-Hy-h7S" customClass="SetTableViewCell" customModule="Remote" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="533" width="375" height="61"/>
+                                        <rect key="frame" x="0.0" y="585" width="375" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2MQ-Hy-h7S" id="xSe-pD-dQ3">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ai-uR-L0q">
-                                                    <rect key="frame" x="35" y="7" width="52.5" height="35"/>
+                                                    <rect key="frame" x="35" y="5" width="75" height="39"/>
                                                     <color key="backgroundColor" red="0.69272806519999996" green="0.86754141169999999" blue="0.58940149649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="6Ai-uR-L0q" secondAttribute="height" multiplier="3:2" id="Cd8-Zr-tDv"/>
+                                                        <constraint firstAttribute="width" secondItem="6Ai-uR-L0q" secondAttribute="height" multiplier="1.9" id="Cd8-Zr-tDv"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <state key="normal" title="Set">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="2MQ-Hy-h7S" eventType="touchUpInside" id="oC5-cq-AvU"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4za-ch-r1F">
-                                                    <rect key="frame" x="287.5" y="7" width="52.5" height="35"/>
+                                                    <rect key="frame" x="265" y="5" width="75" height="39"/>
                                                     <color key="backgroundColor" red="0.69272806519999996" green="0.86754141169999999" blue="0.58940149649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <state key="normal" title="Ok">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="2MQ-Hy-h7S" eventType="touchUpInside" id="y4T-DG-KIl"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOCK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtW-SV-YX0">
                                                     <rect key="frame" x="0.0" y="43.5" width="375" height="17"/>
@@ -448,10 +497,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgt-Nh-2d2">
-                                                    <rect key="frame" x="161.5" y="7" width="52.5" height="35"/>
+                                                    <rect key="frame" x="150.5" y="5" width="75" height="39"/>
                                                     <color key="backgroundColor" white="0.84417782740000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <inset key="imageEdgeInsets" minX="8" minY="4" maxX="8" maxY="4"/>
                                                     <state key="normal" image="ic_clock"/>
+                                                    <connections>
+                                                        <action selector="ibTouchButton:" destination="2MQ-Hy-h7S" eventType="touchUpInside" id="Xpo-mN-enc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -469,26 +521,29 @@
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="6Ai-uR-L0q" firstAttribute="centerY" secondItem="2MQ-Hy-h7S" secondAttribute="centerY" constant="-6" id="0ES-QI-gcG"/>
+                                            <constraint firstItem="6Ai-uR-L0q" firstAttribute="width" secondItem="2MQ-Hy-h7S" secondAttribute="width" multiplier="1:5" id="3ON-f1-tsQ"/>
                                             <constraint firstItem="wtW-SV-YX0" firstAttribute="width" secondItem="2MQ-Hy-h7S" secondAttribute="width" id="79P-Ja-NZL"/>
                                             <constraint firstItem="wtW-SV-YX0" firstAttribute="leading" secondItem="2MQ-Hy-h7S" secondAttribute="leading" id="EtA-gC-iJc"/>
                                             <constraint firstItem="cgt-Nh-2d2" firstAttribute="centerX" secondItem="2MQ-Hy-h7S" secondAttribute="centerX" id="jGP-d9-aGj"/>
-                                            <constraint firstItem="6Ai-uR-L0q" firstAttribute="height" secondItem="2MQ-Hy-h7S" secondAttribute="height" multiplier="4:7" id="og9-DY-JAS"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ibClockButton" destination="cgt-Nh-2d2" id="NVd-kN-lH1"/>
                                             <outlet property="ibOkButton" destination="4za-ch-r1F" id="6DR-i8-PSa"/>
                                             <outlet property="ibSetButton" destination="6Ai-uR-L0q" id="vBx-7A-wuP"/>
+                                            <outletCollection property="ibGroupButtons" destination="6Ai-uR-L0q" collectionClass="NSMutableArray" id="u2X-6c-lMq"/>
+                                            <outletCollection property="ibGroupButtons" destination="cgt-Nh-2d2" collectionClass="NSMutableArray" id="VEO-AW-2hz"/>
+                                            <outletCollection property="ibGroupButtons" destination="4za-ch-r1F" collectionClass="NSMutableArray" id="tc3-nn-xIu"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BrandTableViewCell" rowHeight="57" id="FpW-Fx-l2Y" customClass="BrandTableViewCell" customModule="Remote" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="594" width="375" height="57"/>
+                                        <rect key="frame" x="0.0" y="646" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FpW-Fx-l2Y" id="rZo-C6-AN8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHUNGHOP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vcv-zk-Ffq">
-                                                    <rect key="frame" x="0.0" y="23.5" width="320" height="21"/>
+                                                    <rect key="frame" x="0.0" y="23.5" width="375" height="21"/>
                                                     <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -517,6 +572,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="ibMainTableView" destination="Z3m-X7-Hyd" id="Zo0-XU-rqo"/>
                     </connections>

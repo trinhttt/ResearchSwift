@@ -25,11 +25,11 @@ extension ViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0{
-            return tableView.frame.size.height / 3.2///225
+            return tableView.frame.size.height / 2.7///225
         }else if indexPath.row == 1{
-            return tableView.frame.size.height / 10
+            return tableView.frame.size.height / 11
         }else if indexPath.row == 2{
-            return tableView.frame.size.height / 5
+            return tableView.frame.size.height / 5.5
         }else if indexPath.row == 3{
             return tableView.frame.size.height / 10
         }else if indexPath.row == 4{
@@ -49,16 +49,22 @@ extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "DisplayDegreeTableViewCell") as! DisplayDegreeTableViewCell
-             cell.ibDegreeLabel.text = String(PublicVariable.degree) + "℃"
-            if PublicVariable.degree == 27{
-                cell.ibMinMax.text = "MAX"
-            }
-            else if PublicVariable.degree == 17{
-                cell.ibMinMax.text = "MIN"
+            if PublicVariable.chooseButton != 0{
+                cell.ibDegreeLabel.text = PublicVariable.arrDisplaytext[PublicVariable.chooseButton - 1]
             }else{
-                cell.ibMinMax.text = ""
+                if PublicVariable.degree == 27{
+                    cell.ibDegreeLabel.text = String(PublicVariable.degree) + "℃"
+                    cell.ibMinMax.text = "MAX"
+                }
+                else if PublicVariable.degree == 17{
+                    cell.ibDegreeLabel.text = String(PublicVariable.degree) + "℃"
+                    cell.ibMinMax.text = "MIN"
+                }else{
+                    cell.ibDegreeLabel.text = String(PublicVariable.degree) + "℃"
+                    cell.ibMinMax.text = ""
+                }
             }
-           
+            PublicVariable.chooseButton = 0
             return cell
         }else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "LightTableViewCell") as! LightTableViewCell
@@ -71,6 +77,7 @@ extension ViewController: UITableViewDataSource{
             return cell
         }else if indexPath.row == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimeTableViewCell") as! TimeTableViewCell
+           
             return cell
         }else if indexPath.row == 5{
             let cell = tableView.dequeueReusableCell(withIdentifier: "SetTableViewCell") as! SetTableViewCell

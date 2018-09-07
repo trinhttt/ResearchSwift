@@ -20,10 +20,6 @@ class DisplayDegreeTableViewCell: UITableViewCell {
         ibBackgroundView.layer.cornerRadius = 20
         ibDisplayView.layer.cornerRadius = 10
         ibDegreeLabel.text = String(PublicVariable.degree) + "℃"
-//        ibBackgroundView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
-//        ibBackgroundView.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-//        ibBackgroundView.layer.shadowOpacity = 1.0
-//        ibBackgroundView.layer.shadowRadius = 0.0
         ibDisplayView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4).cgColor
         ibDisplayView.layer.shadowOffset = CGSize(width: 1, height: 1)
         ibDisplayView.layer.shadowOpacity = 1.0
