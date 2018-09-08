@@ -22,7 +22,18 @@ class ViewController: UIViewController {
         ibDrawView.isUserInteractionEnabled = true
         ibDrawView.addGestureRecognizer(gesture)
     }
-  
+    var rotated : Bool = false
+
+    @IBAction func rotate() {
+        if rotated {
+            self.ibDrawView.transform = .identity
+        }else {
+            self.ibDrawView.transform = CGAffineTransform.identity.rotated(by: CGFloat.pi / 2)
+        }
+        
+        rotated = !rotated
+        
+    }
     @objc func draggedView(_ sender:UIPanGestureRecognizer){
         self.view.bringSubview(toFront: ibDrawView)
         let translation = sender.translation(in: self.view)
