@@ -24,9 +24,9 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIS-ot-bGQ">
                                         <rect key="frame" x="0.0" y="1" width="375" height="1.5"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="pDh-z6-r0A"/>
+                                            <constraint firstAttribute="height" constant="1.5" id="pDh-z6-r0A"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="DVY-6d-lVR">
@@ -35,8 +35,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBa-xy-czw">
                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="41.5"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="3" maxX="9" maxY="3"/>
+                                                <state key="normal" title="Rect">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="ibDrawRectangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q5J-FT-EBM"/>
@@ -44,24 +46,36 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVY-Xt-Ju0">
                                                 <rect key="frame" x="84" y="0.0" width="43.5" height="41.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Circle">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ibDrawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uld-Zp-foa"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rF1-Uu-4dt">
                                                 <rect key="frame" x="167.5" y="0.0" width="44" height="41.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="3" minY="0.0" maxX="3" maxY="0.0"/>
                                                 <state key="normal" title="Line">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ibDrawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6a-UO-dMl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybZ-35-zlG">
                                                 <rect key="frame" x="251.5" y="0.0" width="43.5" height="41.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-4"/>
                                                 <state key="normal" title="Text">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ibDrawTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IBf-3P-Irn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -92,7 +106,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.062745098039215685" green="0.062745098039215685" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CUH-25-Q4i"/>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aRv-vr-o8d"/>
@@ -102,7 +116,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ibCircleButton" destination="SVY-Xt-Ju0" id="2c3-3V-eaI"/>
+                        <outlet property="ibLineButton" destination="rF1-Uu-4dt" id="ics-jE-Ya7"/>
                         <outlet property="ibRectangleButton" destination="xBa-xy-czw" id="amM-qa-AaB"/>
+                        <outlet property="ibTextButton" destination="ybZ-35-zlG" id="2re-uz-X1J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

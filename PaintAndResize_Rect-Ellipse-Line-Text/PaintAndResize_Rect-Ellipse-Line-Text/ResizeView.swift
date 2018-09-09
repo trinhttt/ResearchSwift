@@ -13,34 +13,49 @@ enum DragDirection {
     case right
     case left
 }
+var chooseDrawLine: Bool = false
+var contentTextView = UITextField(){
+    didSet {
+        repositionContentTextView()///dat lai vi tri view noi dung
+    }
+}
 
+func repositionContentTextView() {
+    contentTextView.frame = (contentTextView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
+}
+////////
+ var contentView = UIView() {
+    didSet {
+        repositionContentView()///dat lai vi tri view noi dung
+    }
+}
+
+ func repositionContentView() {
+    contentView.frame = (contentView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
+}
+
+ var borderInset : CGFloat = 5.0 {///viền ở ngoài
+    didSet {
+        repositionContentTextView()//
+        contentTextView.setNeedsDisplay()//
+        repositionContentView()
+        contentView.setNeedsDisplay()
+        
+       
+    }
+}
 class ResizeView: UIView {
     
-    public var minHeight : CGFloat = 40.0
-    public var minWidth : CGFloat = 40.0
+    public var minHeight : CGFloat = 0.0
+    public var minWidth : CGFloat = 0.0
     public var showBorders : Bool = true {
         didSet {
             self.setNeedsDisplay()///Hàm có sẳn: Đánh dấu toàn bộ hình chữ nhật của người nhận khi cần phải vẽ lại.
         }
     }
     
-    @IBOutlet weak var contentView : UIView? {
-        didSet {
-            repositionContentView()///dat lai vi tri view noi dung
-        }
-    }
-    
-    func repositionContentView() {
-        contentView?.frame = self.bounds.insetBy(dx: borderInset, dy: borderInset)///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
-    }
-    
-    public var borderInset : CGFloat = 10.0 {///viền ở ngoài
-        didSet {
-            repositionContentView()
-            self.setNeedsDisplay()
-        }
-    }
-    public var borderSize : CGFloat = 10
+   
+    public var borderSize : CGFloat = 5
     public var handleSize : CGFloat = 5 {
         didSet {
             self.setNeedsDisplay()
@@ -237,38 +252,54 @@ class ResizeView: UIView {
             }
         }
         self.frame = CGRect(x: newX, y: newY, width: newW, height: newH)
+       
+
+        contentView.layer.cornerRadius = (contentView.frame.width) / 2.0
         self.setNeedsDisplay()
     }
     
     override func draw(_ rect: CGRect) {
         //        super.draw(rect)
-       
         guard showBorders, let context = UIGraphicsGetCurrentContext() else {
             return
         }
         ///Đường kẻ ở ngoài
         context.setLineWidth(1)
         context.setStrokeColor(UIColor.red.cgColor)
-        let centerSpacing = borderInset / 2
-        let segments = [CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
-                        CGPoint(x:rect.maxX - centerSpacing, y: rect.minY + centerSpacing),
-                        CGPoint(x:rect.maxX - centerSpacing, y: rect.minY + centerSpacing),
-                        CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing),
-                        CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing),
-                        CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
-                        CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
-                        CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing)
-        ]
-        context.strokeLineSegments(between: segments)
+        let centerSpacing = borderInset/8
+        let segments = [
+            CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
+            CGPoint(x:rect.maxX - centerSpacing, y: rect.minY + centerSpacing),
+            CGPoint(x:rect.maxX - centerSpacing, y: rect.minY + centerSpacing),
+            CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing),
+            CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing),
+            CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
+            CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
+            CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing)]
+        if chooseDrawLine == false {
+                context.strokeLineSegments(between: segments)
+            context.setFillColor(UIColor.red.cgColor)
+            
+            context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: self.bounds.size.width / 2 - centerSpacing, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x:self.bounds.size.width / 2 - centerSpacing, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            
+        }else{
+            context.strokeLineSegments(between: [ CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
+                                                  CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing)])
+            context.setFillColor(UIColor.red.cgColor)
+             context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+             context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            
+        }
+        
+        
         ///8 điểm tròn
-        context.setFillColor(UIColor.red.cgColor)
-        context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: self.bounds.size.width / 2 - centerSpacing, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x:self.bounds.size.width / 2 - centerSpacing, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-        context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+        
     }
 }
