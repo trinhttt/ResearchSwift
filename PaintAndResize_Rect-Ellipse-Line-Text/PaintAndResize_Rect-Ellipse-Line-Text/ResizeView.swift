@@ -24,24 +24,24 @@ func repositionContentTextView() {
     contentTextView.frame = (contentTextView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
 }
 ////////
- var contentView = UIView() {
+var contentView = UIView() {
     didSet {
         repositionContentView()///dat lai vi tri view noi dung
     }
 }
 
- func repositionContentView() {
+func repositionContentView() {
     contentView.frame = (contentView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
 }
 
- var borderInset : CGFloat = 5.0 {///viền ở ngoài
+var borderInset : CGFloat = 5.0 {///viền ở ngoài
     didSet {
         repositionContentTextView()//
         contentTextView.setNeedsDisplay()//
         repositionContentView()
         contentView.setNeedsDisplay()
         
-       
+        
     }
 }
 class ResizeView: UIView {
@@ -54,7 +54,7 @@ class ResizeView: UIView {
         }
     }
     
-   
+    
     public var borderSize : CGFloat = 5
     public var handleSize : CGFloat = 5 {
         didSet {
@@ -99,7 +99,7 @@ class ResizeView: UIView {
         let Point7 = CGRect(x: 0, y: self.frame.size.height - borderSize , width: borderSize, height: borderSize).contains(locationInView)
         
         let Point8 = CGRect(x: 0, y: self.frame.size.height / 2 - borderSize / 2, width: borderSize, height: borderSize).contains(locationInView)
- 
+        
         handleSelection = []
         if Point1 { ////Chọn điểm trên bên trái thì sẽ thay đổi theo chiều LÊN & TRÁI
             handleSelection.append(.up)
@@ -252,8 +252,8 @@ class ResizeView: UIView {
             }
         }
         self.frame = CGRect(x: newX, y: newY, width: newW, height: newH)
-       
-
+        
+        
         contentView.layer.cornerRadius = (contentView.frame.width) / 2.0
         self.setNeedsDisplay()
     }
@@ -277,7 +277,7 @@ class ResizeView: UIView {
             CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
             CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing)]
         if chooseDrawLine == false {
-                context.strokeLineSegments(between: segments)
+            context.strokeLineSegments(between: segments)
             context.setFillColor(UIColor.red.cgColor)
             
             context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
@@ -293,8 +293,8 @@ class ResizeView: UIView {
             context.strokeLineSegments(between: [ CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
                                                   CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing)])
             context.setFillColor(UIColor.red.cgColor)
-             context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-             context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+            context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
             
         }
         
