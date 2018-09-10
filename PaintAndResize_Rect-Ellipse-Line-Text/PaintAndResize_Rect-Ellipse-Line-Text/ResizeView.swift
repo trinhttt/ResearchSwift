@@ -13,7 +13,6 @@ enum DragDirection {
     case right
     case left
 }
-var chooseDrawLine: Bool = false
 var contentTextView = UITextField(){
     didSet {
         repositionContentTextView()///dat lai vi tri view noi dung
@@ -24,24 +23,32 @@ func repositionContentTextView() {
     contentTextView.frame = (contentTextView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
 }
 ////////
-var contentView = UIView() {
+ var contentView = UIView() {
     didSet {
         repositionContentView()///dat lai vi tri view noi dung
     }
 }
 
-func repositionContentView() {
+ func repositionContentView() {
     contentView.frame = (contentView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
 }
 
-var borderInset : CGFloat = 5.0 {///viền ở ngoài
+ var borderInset : CGFloat = 10 {///viền ở ngoài
     didSet {
         repositionContentTextView()//
         contentTextView.setNeedsDisplay()//
         repositionContentView()
         contentView.setNeedsDisplay()
         
+       
+    }
+}
+ var handleSize : CGFloat = 10 {
+    didSet {
+        contentTextView.setNeedsDisplay()//
+        contentView.setNeedsDisplay()
         
+//        self.setNeedsDisplay()
     }
 }
 class ResizeView: UIView {
@@ -54,13 +61,9 @@ class ResizeView: UIView {
         }
     }
     
-    
-    public var borderSize : CGFloat = 5
-    public var handleSize : CGFloat = 5 {
-        didSet {
-            self.setNeedsDisplay()
-        }
-    }
+   
+    public var borderSize : CGFloat = 10
+
     private var lastLocation : CGPoint!
     private var dragging: Bool {
         get  {
@@ -99,7 +102,7 @@ class ResizeView: UIView {
         let Point7 = CGRect(x: 0, y: self.frame.size.height - borderSize , width: borderSize, height: borderSize).contains(locationInView)
         
         let Point8 = CGRect(x: 0, y: self.frame.size.height / 2 - borderSize / 2, width: borderSize, height: borderSize).contains(locationInView)
-        
+ 
         handleSelection = []
         if Point1 { ////Chọn điểm trên bên trái thì sẽ thay đổi theo chiều LÊN & TRÁI
             handleSelection.append(.up)
@@ -143,6 +146,20 @@ class ResizeView: UIView {
             return
         }
         let locationInSuperview = touch.location(in: superview)
+//
+        print("Location:")
+        print(self.frame.origin.x)
+        print(locationInSuperview.x)
+        var temp: CGFloat = 0
+        if self.frame.origin.x == locationInSuperview.x{
+            temp = locationInSuperview.x
+        }
+        if self.frame.origin.x > temp{
+            print(">>>")
+            self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+        }else{
+            
+        }
         if dragging {
             moveCenter(to: locationInSuperview)
         }else {
@@ -252,8 +269,8 @@ class ResizeView: UIView {
             }
         }
         self.frame = CGRect(x: newX, y: newY, width: newW, height: newH)
-        
-        
+       
+
         contentView.layer.cornerRadius = (contentView.frame.width) / 2.0
         self.setNeedsDisplay()
     }
@@ -266,7 +283,7 @@ class ResizeView: UIView {
         ///Đường kẻ ở ngoài
         context.setLineWidth(1)
         context.setStrokeColor(UIColor.red.cgColor)
-        let centerSpacing = borderInset/8
+        let centerSpacing = borderInset/15
         let segments = [
             CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
             CGPoint(x:rect.maxX - centerSpacing, y: rect.minY + centerSpacing),
@@ -276,7 +293,6 @@ class ResizeView: UIView {
             CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
             CGPoint(x:rect.minX + centerSpacing, y: rect.maxY - centerSpacing),
             CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing)]
-        if chooseDrawLine == false {
             context.strokeLineSegments(between: segments)
             context.setFillColor(UIColor.red.cgColor)
             
@@ -288,18 +304,6 @@ class ResizeView: UIView {
             context.fillEllipse(in: CGRect(x:self.bounds.size.width / 2 - centerSpacing, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
             context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
             context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-            
-        }else{
-            context.strokeLineSegments(between: [ CGPoint(x:rect.minX + centerSpacing, y: rect.minY + centerSpacing),
-                                                  CGPoint(x:rect.maxX - centerSpacing, y: rect.maxY - centerSpacing)])
-            context.setFillColor(UIColor.red.cgColor)
-            context.fillEllipse(in: CGRect(x: 0, y: 0, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-            context.fillEllipse(in: CGRect(x: self.bounds.size.width - borderInset, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
-            
-        }
-        
-        
-        ///8 điểm tròn
         
     }
 }

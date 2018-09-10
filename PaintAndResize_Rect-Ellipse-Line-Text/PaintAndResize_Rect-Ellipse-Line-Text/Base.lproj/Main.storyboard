@@ -105,11 +105,19 @@
                                     <constraint firstItem="DVY-6d-lVR" firstAttribute="leading" secondItem="3rQ-R2-dsb" secondAttribute="leading" constant="40" id="yww-FW-n6m"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clg-MU-a0C">
+                                <rect key="frame" x="0.0" y="20" width="375" height="563.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Clg-MU-a0C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7j3-GP-YyE"/>
+                            <constraint firstItem="3rQ-R2-dsb" firstAttribute="top" secondItem="Clg-MU-a0C" secondAttribute="bottom" id="ACd-pd-zmj"/>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CUH-25-Q4i"/>
+                            <constraint firstItem="Clg-MU-a0C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zlc-ad-Q7I"/>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aRv-vr-o8d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Clg-MU-a0C" secondAttribute="trailing" id="gA6-Mw-BG6"/>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="sjh-xK-TBO"/>
                             <constraint firstItem="3rQ-R2-dsb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:8" id="vqj-ie-7wB"/>
                         </constraints>
@@ -117,6 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="ibCircleButton" destination="SVY-Xt-Ju0" id="2c3-3V-eaI"/>
+                        <outlet property="ibDrawView" destination="Clg-MU-a0C" id="Bvp-KK-wSI"/>
                         <outlet property="ibLineButton" destination="rF1-Uu-4dt" id="ics-jE-Ya7"/>
                         <outlet property="ibRectangleButton" destination="xBa-xy-czw" id="amM-qa-AaB"/>
                         <outlet property="ibTextButton" destination="ybZ-35-zlG" id="2re-uz-X1J"/>
