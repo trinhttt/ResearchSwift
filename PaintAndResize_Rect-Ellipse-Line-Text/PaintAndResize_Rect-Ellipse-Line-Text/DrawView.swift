@@ -9,13 +9,6 @@
 import UIKit
 import CoreGraphics
 
-struct Line{
-    var begin = CGPoint.zero
-    var end = CGPoint.zero
-}
-var line = Line()
-var finishedLines = [Line]()
-
 class DrawView: UIView {
     @IBInspectable var finishedLineColor: UIColor = UIColor.black{
         didSet{
@@ -55,8 +48,6 @@ class DrawView: UIView {
         
        let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(UIColor.red.cgColor)
-        print(line.begin.x)
-        print(line.begin.y)
         if line.begin.x != 0 &&  line.begin.y != 0
         {
             context?.fillEllipse(in: CGRect(x: line.begin.x - 4, y: line.begin.y - 4, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
@@ -71,6 +62,8 @@ class DrawView: UIView {
             line = Line(begin: location, end: location)
              finishedLines.append(line)
         }
+        print("Start point: (\(line.begin.x),\(line.begin.y))")
+
         setNeedsDisplay()
     }
     

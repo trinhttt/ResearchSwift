@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E06A8592146D352005DB211 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06A8582146D352005DB211 /* DrawLine.swift */; };
-		0E22DDB82144232600EB5343 /* MovingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E22DDB72144232600EB5343 /* MovingDetail.swift */; };
+		0E06A8592146D352005DB211 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E06A8582146D352005DB211 /* DrawView.swift */; };
+		96160D4A2147A6C500235269 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96160D492147A6C500235269 /* Public.swift */; };
 		963BE7EE21426A2900EE1162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BE7ED21426A2900EE1162 /* AppDelegate.swift */; };
 		963BE7F021426A2900EE1162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BE7EF21426A2900EE1162 /* ViewController.swift */; };
 		963BE7F321426A2900EE1162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963BE7F121426A2900EE1162 /* Main.storyboard */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E06A8582146D352005DB211 /* DrawLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLine.swift; sourceTree = "<group>"; };
-		0E22DDB72144232600EB5343 /* MovingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingDetail.swift; sourceTree = "<group>"; };
+		0E06A8582146D352005DB211 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		96160D492147A6C500235269 /* Public.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
 		963BE7EA21426A2900EE1162 /* PaintAndResize_Rect-Ellipse-Line-Text.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PaintAndResize_Rect-Ellipse-Line-Text.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		963BE7ED21426A2900EE1162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963BE7EF21426A2900EE1162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,15 +60,15 @@
 		963BE7EC21426A2900EE1162 /* PaintAndResize_Rect-Ellipse-Line-Text */ = {
 			isa = PBXGroup;
 			children = (
+				96160D492147A6C500235269 /* Public.swift */,
 				963BE7EF21426A2900EE1162 /* ViewController.swift */,
 				963BE7FF2142793E00EE1162 /* ResizeView.swift */,
-				0E06A8582146D352005DB211 /* DrawLine.swift */,
+				0E06A8582146D352005DB211 /* DrawView.swift */,
 				963BE7F121426A2900EE1162 /* Main.storyboard */,
 				963BE7F421426A2C00EE1162 /* Assets.xcassets */,
 				963BE7F621426A2C00EE1162 /* LaunchScreen.storyboard */,
 				963BE7F921426A2C00EE1162 /* Info.plist */,
 				963BE7ED21426A2900EE1162 /* AppDelegate.swift */,
-				0E22DDB72144232600EB5343 /* MovingDetail.swift */,
 			);
 			path = "PaintAndResize_Rect-Ellipse-Line-Text";
 			sourceTree = "<group>";
@@ -145,10 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				963BE7F021426A2900EE1162 /* ViewController.swift in Sources */,
-				0E22DDB82144232600EB5343 /* MovingDetail.swift in Sources */,
 				963BE7EE21426A2900EE1162 /* AppDelegate.swift in Sources */,
+				96160D4A2147A6C500235269 /* Public.swift in Sources */,
 				963BE8002142793E00EE1162 /* ResizeView.swift in Sources */,
-				0E06A8592146D352005DB211 /* DrawLine.swift in Sources */,
+				0E06A8592146D352005DB211 /* DrawView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = "PaintAndResize_Rect-Ellipse-Line-Text/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = "PaintAndResize_Rect-Ellipse-Line-Text/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

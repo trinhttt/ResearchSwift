@@ -7,50 +7,10 @@
 //
 
 import UIKit
-enum DragDirection {
-    case up
-    case down
-    case right
-    case left
-}
-var contentTextView = UITextField(){
-    didSet {
-        repositionContentTextView()///dat lai vi tri view noi dung
-    }
-}
+import CoreGraphics
 
-func repositionContentTextView() {
-    contentTextView.frame = (contentTextView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
-}
-////////
- var contentView = UIView() {
-    didSet {
-        repositionContentView()///dat lai vi tri view noi dung
-    }
-}
-
- func repositionContentView() {
-    contentView.frame = (contentView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!///insetBy(dx: CGFloat, dy: CGFloat) -> CGRect
-}
-
- var borderInset : CGFloat = 10 {///viền ở ngoài
-    didSet {
-        repositionContentTextView()//
-        contentTextView.setNeedsDisplay()//
-        repositionContentView()
-        contentView.setNeedsDisplay()
-        
-       
-    }
-}
- var handleSize : CGFloat = 10 {
-    didSet {
-        contentTextView.setNeedsDisplay()//
-        contentView.setNeedsDisplay()
-        
-//        self.setNeedsDisplay()
-    }
-}
+var startPointDrawRect = [CGPoint]()
+var oneTimes = 1
 class ResizeView: UIView {
     
     public var minHeight : CGFloat = 0.0
@@ -60,8 +20,6 @@ class ResizeView: UIView {
             self.setNeedsDisplay()///Hàm có sẳn: Đánh dấu toàn bộ hình chữ nhật của người nhận khi cần phải vẽ lại.
         }
     }
-    
-   
     public var borderSize : CGFloat = 10
 
     private var lastLocation : CGPoint!
@@ -83,24 +41,20 @@ class ResizeView: UIView {
         let frame = self.frame
         locationInView.x = locationInView.x - frame.origin.x
         locationInView.y = locationInView.y - frame.origin.y
-        
+        if oneTimes == 1 {
+            startPointDrawRect.append(locationInView)
+            oneTimes = oneTimes + 1
+        }
         ///  1   2   3
         ///  8       4
         ///  7   6   5
         let Point1 = CGRect(x: 0, y: 0, width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point2 = CGRect(x: self.frame.size.width / 2 - borderSize / 2, y: 0, width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point3 = CGRect(x: self.frame.size.width - borderSize , y: 0, width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point4 = CGRect(x: self.frame.size.width - borderSize , y: self.frame.size.height / 2 - borderSize / 2, width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point5 = CGRect(x: self.frame.size.width - borderSize, y: self.frame.size.height - borderSize, width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point6 = CGRect(x: self.frame.size.width / 2 - borderSize / 2 , y: self.frame.size.height - borderSize , width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point7 = CGRect(x: 0, y: self.frame.size.height - borderSize , width: borderSize, height: borderSize).contains(locationInView)
-        
         let Point8 = CGRect(x: 0, y: self.frame.size.height / 2 - borderSize / 2, width: borderSize, height: borderSize).contains(locationInView)
  
         handleSelection = []
@@ -139,44 +93,40 @@ class ResizeView: UIView {
     /// Mỗi lần thay đổi đều gọi đến hàm touches moved
     /// Nếu đang còn kéo thì gọi hàm moveCenter để cập nhật tọa độ điểm chính giữa.
     ///Nếu đã thả ra rồi thì cập nhật
-    
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("(center.x: \(self.frame.origin.x), center.y: \(self.frame.origin.y), width: \(self.frame.size.width), height: \(self.frame.size.height))")/// tọa độ của điểm điểm giữa, khi kéo rộng ra sẽ không thay đổi, Chiều rộng view, Chiều cao view
+//        print("(x: \(self.frame.origin.x), y: \(self.frame.origin.y), width: \(self.frame.size.width), height: \(self.frame.size.height))")/// tọa độ của điểm điểm giữa, khi kéo rộng ra sẽ không thay đổi, Chiều rộng view, Chiều cao view
         guard let superview = self.superview, let touch = touches.first, showBorders else {
             return
         }
         let locationInSuperview = touch.location(in: superview)
-//
-        print("Location:")
-        print(self.frame.origin.x)
-        print(locationInSuperview.x)
-        var temp: CGFloat = 0
-        if self.frame.origin.x == locationInSuperview.x{
-            temp = locationInSuperview.x
-        }
-        if self.frame.origin.x > temp{
-            print(">>>")
-            self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
-        }else{
-            
-        }
         if dragging {
             moveCenter(to: locationInSuperview)
         }else {
             resize(using: locationInSuperview)
         }
         lastLocation = locationInSuperview
+        setNeedsDisplay()
+
     }
     
     ///Gọi khi buông k kéo nữa
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touchesEnded")
+        arrContentView.append(contentView)
         handleSelection = []
+        setNeedsDisplay()
+        oneTimes = 1
+
+        print("Start point of rect: (\(contentView.frame.origin.x),\(contentView.frame.origin.y))")
+
+
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("touchesCancelled")
         handleSelection = []
+        setNeedsDisplay()
+
     }
     
     private func moveCenter(to newLocation: CGPoint) {
@@ -270,7 +220,6 @@ class ResizeView: UIView {
         }
         self.frame = CGRect(x: newX, y: newY, width: newW, height: newH)
        
-
         contentView.layer.cornerRadius = (contentView.frame.width) / 2.0
         self.setNeedsDisplay()
     }
@@ -304,6 +253,21 @@ class ResizeView: UIView {
             context.fillEllipse(in: CGRect(x:self.bounds.size.width / 2 - centerSpacing, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
             context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height - borderInset, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
             context.fillEllipse(in: CGRect(x: 0, y: self.bounds.size.height / 2 - centerSpacing, width: borderInset, height: borderInset).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+        /////
+//        let context2 = UIGraphicsGetCurrentContext()
+//        context2?.setFillColor(UIColor.blue.cgColor)
+//        print("arr: \(arrContentView.count)")
+//        var indexPoint = 0
+//        for contentDrawView in arrContentView{
+////            print(startPointDrawRect[indexPoint].x)
+////            print(startPointDrawRect[indexPoint].y)
+//
+//            context2?.fillEllipse(in: CGRect(x: startPointDrawRect[indexPoint].x,y: startPointDrawRect[indexPoint].y, width: contentDrawView.frame.size.width, height: contentDrawView.frame.size.height).insetBy(dx: (borderInset - handleSize) / 2, dy: (borderInset - handleSize) / 2))
+//            indexPoint = indexPoint + 1
+//        }
+
+        self.setNeedsDisplay()
+
         
     }
 }

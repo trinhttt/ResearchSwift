@@ -20,25 +20,8 @@ class ViewController: UIViewController {
     var resizeView2 : ResizeView = ResizeView()
     var resizeView3 : ResizeView = ResizeView()
     var resizeView4 : DrawView = DrawView()
-
-    var subView = UIView()
-    @IBAction func ibDrawRectangle(_ sender: Any) {
-        contentTextView.removeFromSuperview()
-        contentView.removeFromSuperview()
-        resizeView1.removeFromSuperview()
-        resizeView2.removeFromSuperview()
-        resizeView3.removeFromSuperview()
-        resizeView4.removeFromSuperview()
-
-        self.resizeView1.backgroundColor = .white
-        self.resizeView1.frame = CGRect(x: 30, y: 40, width: 170, height: 170)
-        self.view.addSubview(resizeView1)
-        resizeView1.setNeedsDisplay()
-
-    }
     
-    
-    @IBAction func ibDrawCircle(_ sender: Any) {
+    @IBAction func ibClearViewAction(_ sender: Any) {
         finishedLines.removeAll()
         line.begin = CGPoint.zero
         line.end = CGPoint.zero
@@ -48,46 +31,44 @@ class ViewController: UIViewController {
         resizeView2.removeFromSuperview()
         resizeView3.removeFromSuperview()
         resizeView4.removeFromSuperview()
-        
-        self.resizeView2.backgroundColor = .lightGray
-        self.resizeView2.frame = CGRect(x: 30, y: 40, width: 170, height: 170)
-        self.view.addSubview(resizeView2)
+    }
+    @IBAction func ibDrawRectangle(_ sender: Any) {
+        self.resizeView1.backgroundColor = .lightGray
+        self.resizeView1.frame = CGRect(x: 30, y: 40, width: 170, height: 170)
+        self.ibDrawView.addSubview(resizeView1)
 
+        resizeView1.setNeedsDisplay()
+
+    }
+    
+    
+    @IBAction func ibDrawCircle(_ sender: Any) {
+
+        self.resizeView2.backgroundColor = .white
+        self.resizeView2.frame = CGRect(x: 30, y: 40, width: 170, height: 170)
+        self.ibDrawView.addSubview(resizeView2)
+        
         self.resizeView2.addSubview(contentView)
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .lightGray
         contentView.frame = (contentView.superview?.bounds.insetBy(dx: borderInset/8, dy: borderInset/8))!
         contentView.layer.cornerRadius = (contentView.frame.width) / 2.0
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth, .flexibleTopMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleBottomMargin]
+//        arrContentView.append(contentView)
         contentView.setNeedsLayout()
         resizeView2.setNeedsDisplay()
     }
     @IBAction func ibDrawLine(_ sender: Any) {
-        contentTextView.removeFromSuperview()
-        contentView.removeFromSuperview()
-        resizeView1.removeFromSuperview()
-        resizeView2.removeFromSuperview()
-        resizeView3.removeFromSuperview()
-        resizeView4.removeFromSuperview()
-        
         self.resizeView4.backgroundColor = .white
-        self.resizeView4.frame = self.ibDrawView.frame
-        self.view.addSubview(resizeView4)
-    
+        self.resizeView4.frame = CGRect(x: 0, y: 0, width: self.ibDrawView.frame.width, height: self.ibDrawView.frame.height)//self.ibDrawView.frame
+        self.ibDrawView.addSubview(resizeView4)
         resizeView4.setNeedsDisplay()
     }
    
     @IBAction func ibDrawTextField(_ sender: Any) {
-        contentTextView.removeFromSuperview()
-        contentView.removeFromSuperview()
-        resizeView1.removeFromSuperview()
-        resizeView2.removeFromSuperview()
-        resizeView3.removeFromSuperview()
-        resizeView4.removeFromSuperview()
-
         self.resizeView3.backgroundColor = .white
         self.resizeView3.frame = CGRect(x: 30, y: 40, width: 300, height: 70)
-        self.view.addSubview(resizeView3)
-
+        self.ibDrawView.addSubview(resizeView3)
+        
         self.resizeView3.addSubview(contentTextView)
         contentTextView.placeholder = "Give me some words"
         contentTextView.backgroundColor = .white
@@ -99,8 +80,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contentTextView.removeFromSuperview()
-        contentView.removeFromSuperview()
+
         let image = UIImage(named: "ic_rectangle")?.withRenderingMode(.alwaysTemplate)
         ibRectangleButton.setImage(image, for: .normal)
         ibRectangleButton.tintColor = UIColor.white
