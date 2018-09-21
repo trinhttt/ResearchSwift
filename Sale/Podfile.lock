@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.7.3)
+  - DynamicBlurView (2.0.2)
+  - Kingfisher (4.8.1)
+  - NYAlertViewController (1.3.0)
+  - PopupDialog (0.8.0):
+    - DynamicBlurView (~> 2.0)
+  - PTPopupWebView (0.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - Kingfisher (~> 4.0)
+  - NYAlertViewController
+  - PopupDialog (~> 0.8)
+  - PTPopupWebView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DynamicBlurView
+    - Kingfisher
+    - NYAlertViewController
+    - PopupDialog
+    - PTPopupWebView
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  NYAlertViewController: b93f82e2c1fc6d5e9485512ddbe7b481f463a074
+  PopupDialog: 11347197b6ac3e0548ac445d40ce68d1d407e9a0
+  PTPopupWebView: 9db92ddc0629ed735dee23d4388d67b18158d55c
+
+PODFILE CHECKSUM: 007b6c720eaed2835910da0f8d9a13db0bf94e0b
+
+COCOAPODS: 1.5.3
