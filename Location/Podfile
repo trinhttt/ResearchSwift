@@ -6,6 +6,8 @@ target 'Location' do
   use_frameworks!
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'Alamofire'
+
   # Pods for Location
 
 end
