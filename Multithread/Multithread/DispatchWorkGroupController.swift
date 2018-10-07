@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
             /*Ở bước 1 chúng ta đặc tả thời gian delay theo đơn vị giây. Bước 2, chúng ta sẽ đợi sau khoảng thời gian đã đặc tả ở trên
             để chạy bất đồng bộ đoạn code update UI trên main thread. 
-            Chúng ta nên sử dụng asyncAfter với Main Queue (serial) và thận trọng khi sử dụng với Concurrent Queue*/
+            Chúng ta nên sử dụng asyncAfter với Main Queue (serial) và thận trọng khi sử dụng với Concurrent Queue
             */   
             
         //------------------------------------------//     
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
             let data = NSData(contentsOf: url! as URL)
             self.ibImage.image = UIImage(data: data! as Data)
             downloadGroup.leave()
-            DispatchQueue.main.async { //không cần bao method trong lời gọi async bởi vì chúng ta không sử dụng wait để block main thread. DisparchGroup sẽ thông báo với chúng ta biết khi không còn một task nào trong group để chạy công việc chúng ta mong muốn trên queue được đặc tả.
+            downloadGroup.notify(queue: DispatchQueue.main) { //9
                 self.displayAlert()
             }
         }
