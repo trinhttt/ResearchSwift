@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E042375216BA5A30042F15F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E042374216BA5A30042F15F /* BaseResponse.swift */; };
+		0E042377216BB0660042F15F /* MGConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E042376216BB0660042F15F /* MGConnection.swift */; };
+		0E042379216BB80F0042F15F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E042378216BB80F0042F15F /* LoginResponse.swift */; };
 		96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850802216B048A00FC84F4 /* AppDelegate.swift */; };
 		96850805216B048A00FC84F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850804216B048A00FC84F4 /* ViewController.swift */; };
 		96850808216B048B00FC84F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96850806216B048B00FC84F4 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E042374216BA5A30042F15F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		0E042376216BB0660042F15F /* MGConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConnection.swift; sourceTree = "<group>"; };
+		0E042378216BB80F0042F15F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		114D827A948D3576F498342D /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		3136C4D4127A699ADC42DB53 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		968507FF216B048A00FC84F4 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,13 +81,16 @@
 			isa = PBXGroup;
 			children = (
 				96850802216B048A00FC84F4 /* AppDelegate.swift */,
-				96850804216B048A00FC84F4 /* ViewController.swift */,
 				96850806216B048B00FC84F4 /* Main.storyboard */,
 				96850809216B049300FC84F4 /* Assets.xcassets */,
 				9685080B216B049300FC84F4 /* LaunchScreen.storyboard */,
 				9685080E216B049300FC84F4 /* Info.plist */,
 				96850814216B0D8600FC84F4 /* Configs.swift */,
 				96850816216B0FD200FC84F4 /* APIRouter.swift */,
+				0E042374216BA5A30042F15F /* BaseResponse.swift */,
+				0E042376216BB0660042F15F /* MGConnection.swift */,
+				0E042378216BB80F0042F15F /* LoginResponse.swift */,
+				96850804216B048A00FC84F4 /* ViewController.swift */,
 			);
 			path = FoodDelivery;
 			sourceTree = "<group>";
@@ -210,10 +219,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E042375216BA5A30042F15F /* BaseResponse.swift in Sources */,
 				96850805216B048A00FC84F4 /* ViewController.swift in Sources */,
 				96850817216B0FD200FC84F4 /* APIRouter.swift in Sources */,
+				0E042377216BB0660042F15F /* MGConnection.swift in Sources */,
 				96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */,
 				96850815216B0D8600FC84F4 /* Configs.swift in Sources */,
+				0E042379216BB80F0042F15F /* LoginResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

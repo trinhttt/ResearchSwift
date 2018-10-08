@@ -18,7 +18,6 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
         
         for (key, value) in headers {
             urlRequest.addValue(value, forHTTPHeaderField: key)// setting header
-
         }
         
         if let parameters = parameters {

@@ -12,8 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        MGConnection.request(APIRouter.login(email: "ttttrinh@gmail.com", password: "123456"), LoginResponse.self,
+                             completion: {(result, err) in
+                                guard err == nil else {
+                                    print("False with code: \(err?.mErrorCode) and message: \(err?.mErrorMessage)")
+                                    return
+                                }
+                                
+                                print("Msg: " + (result?.msg)!)
+        })    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

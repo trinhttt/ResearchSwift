@@ -9,7 +9,7 @@
 import Foundation
 
 struct Production {
-    static let BASE_URL: String = "https://food-delivery-server.herokuapp.com"
+    static let BASE_URL: String = "https://food-delivery-server.herokuapp.com/"
 }
 
 
