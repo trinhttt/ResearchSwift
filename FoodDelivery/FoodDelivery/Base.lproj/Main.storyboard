@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zgC-P1-pKa">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trang chủ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Trang chủ" id="ny5-3g-9yd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="-246"/>
+        </scene>
+        <!--Dạo-->
+        <scene sceneID="mTr-x5-Row">
+            <objects>
+                <viewController id="Rd5-rJ-Dsk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LvJ-mb-Pa5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hQh-k2-NCZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dạo" id="8EE-vH-OLZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sp1-kj-GGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="352"/>
+        </scene>
+        <!--Giỏ hàng-->
+        <scene sceneID="Pto-mL-3qf">
+            <objects>
+                <viewController id="8IG-BL-qnR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9eg-Ze-YXv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Sn5-CI-2Uq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Giỏ hàng" id="fuh-fh-wTo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdk-Sm-Pfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="1042"/>
+        </scene>
+        <!--Tài khoản-->
+        <scene sceneID="hGM-Pe-0qA">
+            <objects>
+                <viewController id="crE-vn-8Qc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbB-3Q-bdu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o86-qe-w86">
+                                <rect key="frame" x="16" y="120" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-zV-oSH">
+                                <rect key="frame" x="16" y="160" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYq-7i-qyw">
+                                <rect key="frame" x="16" y="210" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.49378467739999998" blue="0.34508939179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Đăng nhập">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bx-Jn-ZYF">
+                                <rect key="frame" x="16" y="250" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.69444066309999997" blue="0.44485778920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Đăng ký">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn quên mật khẩu?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBC-Ai-mmV">
+                                <rect key="frame" x="16" y="300" width="195.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xbo-DI-dyL">
+                                <rect key="frame" x="212.5" y="294.5" width="146.5" height="32"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Click vào đây!">
+                                            <attributes>
+                                                <font key="NSFont" size="17" name=".SFNSText"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <integer key="NSUnderline" value="1"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.77798470310000001" blue="0.71988864450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FU2-wQ-T2d" firstAttribute="trailing" secondItem="o86-qe-w86" secondAttribute="trailing" constant="16" id="7uW-S3-ezt"/>
+                            <constraint firstItem="o86-qe-w86" firstAttribute="leading" secondItem="FU2-wQ-T2d" secondAttribute="leading" constant="16" id="8Kn-mC-Nqk"/>
+                            <constraint firstItem="6bx-Jn-ZYF" firstAttribute="trailing" secondItem="tYq-7i-qyw" secondAttribute="trailing" id="8SU-vO-Ts6"/>
+                            <constraint firstItem="tYq-7i-qyw" firstAttribute="top" secondItem="cOS-zV-oSH" secondAttribute="bottom" constant="20" id="8a5-sg-irg"/>
+                            <constraint firstItem="Xbo-DI-dyL" firstAttribute="leading" secondItem="sBC-Ai-mmV" secondAttribute="trailing" constant="1" id="AAL-yT-NBf"/>
+                            <constraint firstItem="cOS-zV-oSH" firstAttribute="top" secondItem="o86-qe-w86" secondAttribute="bottom" constant="10" id="Eg7-ih-XbN"/>
+                            <constraint firstItem="o86-qe-w86" firstAttribute="top" secondItem="FU2-wQ-T2d" secondAttribute="top" constant="100" id="QZs-No-gSn"/>
+                            <constraint firstItem="Xbo-DI-dyL" firstAttribute="centerY" secondItem="sBC-Ai-mmV" secondAttribute="centerY" id="UXC-a9-Cqd"/>
+                            <constraint firstItem="6bx-Jn-ZYF" firstAttribute="leading" secondItem="tYq-7i-qyw" secondAttribute="leading" id="V3q-DZ-oqw"/>
+                            <constraint firstItem="tYq-7i-qyw" firstAttribute="trailing" secondItem="cOS-zV-oSH" secondAttribute="trailing" id="X6y-QO-SN4"/>
+                            <constraint firstItem="Xbo-DI-dyL" firstAttribute="trailing" secondItem="6bx-Jn-ZYF" secondAttribute="trailing" id="fsl-EM-to3"/>
+                            <constraint firstItem="sBC-Ai-mmV" firstAttribute="top" secondItem="6bx-Jn-ZYF" secondAttribute="bottom" constant="20" id="g0r-CR-aXL"/>
+                            <constraint firstItem="sBC-Ai-mmV" firstAttribute="leading" secondItem="6bx-Jn-ZYF" secondAttribute="leading" id="gjv-9u-AkB"/>
+                            <constraint firstItem="tYq-7i-qyw" firstAttribute="leading" secondItem="cOS-zV-oSH" secondAttribute="leading" id="iS7-L1-Jmj"/>
+                            <constraint firstItem="sBC-Ai-mmV" firstAttribute="width" secondItem="6bx-Jn-ZYF" secondAttribute="width" multiplier="0.57" id="ij4-r0-0SR"/>
+                            <constraint firstItem="cOS-zV-oSH" firstAttribute="trailing" secondItem="o86-qe-w86" secondAttribute="trailing" id="lfr-fN-fzg"/>
+                            <constraint firstItem="cOS-zV-oSH" firstAttribute="leading" secondItem="o86-qe-w86" secondAttribute="leading" id="sUZ-Yd-3hH"/>
+                            <constraint firstItem="6bx-Jn-ZYF" firstAttribute="top" secondItem="tYq-7i-qyw" secondAttribute="bottom" constant="10" id="xmm-w9-Hnm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FU2-wQ-T2d"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tài khoản" id="V3m-3L-EJz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T1t-no-yCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703.20000000000005" y="1448.7256371814094"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7nO-Hx-11a">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="zgC-P1-pKa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="thG-qU-7VN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iLn-o7-REJ"/>
+                        <segue destination="Rd5-rJ-Dsk" kind="relationship" relationship="viewControllers" id="ND6-Yr-dtQ"/>
+                        <segue destination="8IG-BL-qnR" kind="relationship" relationship="viewControllers" id="yzw-IW-9K4"/>
+                        <segue destination="crE-vn-8Qc" kind="relationship" relationship="viewControllers" id="L4p-Nf-NZr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSz-1R-BTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="599"/>
+        </scene>
+    </scenes>
+</document>
