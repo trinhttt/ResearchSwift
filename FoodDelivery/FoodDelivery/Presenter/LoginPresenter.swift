@@ -17,15 +17,16 @@ protocol LoginProtocol {
 class LoginPresenter {
     var delegate: LoginProtocol!
     func Login(_ emailParam: String,_ passwordParam: String) {
-        MGConnection.request(APIRouter.login(email: emailParam, password: passwordParam), LoginResponse.self,
+        MGConnection.request(APIRouter.login(email: emailParam, password: passwordParam),
                              completion: {(result, err) in
+                                
                                 guard err == nil else {
-                                    print("False with code: \(err?.mErrorCode) and message: \(err?.mErrorMessage)")
+                                    print("False with code: \(String(describing: err?.mErrorCode)) and message: \(String(describing: err?.mErrorMessage))")
                                     self.delegate.loginSuccessful(isSuccessful: false)
                                     return
                                 }
                                 
-                                //print(result)
+                                print(result as Any)
                                 
                                 self.delegate.loginSuccessful(isSuccessful: true)
                                 

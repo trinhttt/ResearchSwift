@@ -1,16 +1,20 @@
 //
-//  RegisterResponse.swift
+//  CommonResponse.swift
 //  FoodDelivery
 //
-//  Created by Thai Thi Tu Trinh on 10/9/18.
+//  Created by Trinh Thai on 10/10/18.
 //  Copyright © 2018 Thai Thi Tu Trinh. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
-
-class RegisterResponse: Mappable {
+class CommonResponse: Mappable {
+    
+    //login
     var msg: String?
+    var token: String?
+    
+    //register
     var id: Int?
     
     required init?(map: Map) {
@@ -18,7 +22,7 @@ class RegisterResponse: Mappable {
     
     func mapping(map: Map) {
         msg <- map["msg"]
+        token <- map["token"]
         id <- map["id"]
     }
 }
-

@@ -34,7 +34,6 @@ class RegisterViewController: UIViewController {
             Common.displayAlert(info: "Vui lòng nhập đầy đủ thông tin!",view:self)
             return
         }
-        
         guard ibPassword.text == ibConfirmPassword.text else {
             Common.displayAlert(info: "Nhập lại mật khẩu không khớp!",view:self)
             return
@@ -45,7 +44,7 @@ class RegisterViewController: UIViewController {
 
 extension RegisterViewController: RegisterProtocol{
     
-    func loginSuccessful(isSuccessful: Bool) {
+    func registerSuccessful(isSuccessful: Bool) {
         if isSuccessful {
             Common.displayAlert(info: "Đăng ký thành công!",view:self)
         }else{

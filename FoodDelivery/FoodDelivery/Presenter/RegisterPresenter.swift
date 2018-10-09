@@ -8,21 +8,21 @@
 
 import Foundation
 protocol RegisterProtocol {
-    func loginSuccessful(isSuccessful: Bool)
+    func registerSuccessful(isSuccessful: Bool)
 }
 
 class RegisterPresenter {
     var delegate: RegisterProtocol!
     func Register(_ emailParam: String,_ passwordParam: String) {
-        MGConnection.request(APIRouter.register(email: emailParam, password: passwordParam), RegisterResponse.self,
+        MGConnection.request(APIRouter.register(email: emailParam, password: passwordParam),
                              completion: {(result, err) in
                                 guard err == nil else {
-                                    print("False with code: \(err?.mErrorCode) and message: \(err?.mErrorMessage)")
-                                    self.delegate.loginSuccessful(isSuccessful: false)
+                                    print("False with code: \(String(describing: err?.mErrorCode)) and message: \(String(describing: err?.mErrorMessage))")
+                                    self.delegate.registerSuccessful(isSuccessful: false)
                                     return
                                 }
-                                
-                                self.delegate.loginSuccessful(isSuccessful: true)
+                                print(result as Any)
+                                self.delegate.registerSuccessful(isSuccessful: true)
                                 
         })
         

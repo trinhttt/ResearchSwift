@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		961BF99B216CA1CD0089F92E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99A216CA1CD0089F92E /* LoginResponse.swift */; };
+		0EED345E216D29C400B8B263 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EED345D216D29C400B8B263 /* CommonResponse.swift */; };
 		961BF99D216CA1E70089F92E /* MGConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99C216CA1E70089F92E /* MGConnection.swift */; };
 		961BF99F216CA2020089F92E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99E216CA2020089F92E /* LoginViewController.swift */; };
 		961BF9A1216CA2140089F92E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A0216CA2140089F92E /* LoginPresenter.swift */; };
 		961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A5216CA9580089F92E /* RegisterViewController.swift */; };
-		961BF9A8216CACF00089F92E /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A7216CACF00089F92E /* RegisterResponse.swift */; };
 		961BF9AA216CAD9C0089F92E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */; };
 		961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */; };
 		96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850802216B048A00FC84F4 /* AppDelegate.swift */; };
@@ -26,14 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EED345D216D29C400B8B263 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		114D827A948D3576F498342D /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		3136C4D4127A699ADC42DB53 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		961BF99A216CA1CD0089F92E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		961BF99C216CA1E70089F92E /* MGConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConnection.swift; sourceTree = "<group>"; };
 		961BF99E216CA2020089F92E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		961BF9A0216CA2140089F92E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		961BF9A5216CA9580089F92E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		961BF9A7216CACF00089F92E /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		968507FF216B048A00FC84F4 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,21 +97,20 @@
 		961BF9AB216CAE330089F92E /* APISupport */ = {
 			isa = PBXGroup;
 			children = (
-				961BF9AC216CAE880089F92E /* DataResponse */,
+				961BF9AC216CAE880089F92E /* Response */,
 				96850816216B0FD200FC84F4 /* APIRouter.swift */,
 				961BF99C216CA1E70089F92E /* MGConnection.swift */,
 			);
 			path = APISupport;
 			sourceTree = "<group>";
 		};
-		961BF9AC216CAE880089F92E /* DataResponse */ = {
+		961BF9AC216CAE880089F92E /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				961BF9A7216CACF00089F92E /* RegisterResponse.swift */,
 				961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */,
-				961BF99A216CA1CD0089F92E /* LoginResponse.swift */,
+				0EED345D216D29C400B8B263 /* CommonResponse.swift */,
 			);
-			path = DataResponse;
+			path = Response;
 			sourceTree = "<group>";
 		};
 		968507F6216B048A00FC84F4 = {
@@ -276,10 +273,9 @@
 			files = (
 				961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */,
 				961BF9A1216CA2140089F92E /* LoginPresenter.swift in Sources */,
-				961BF99B216CA1CD0089F92E /* LoginResponse.swift in Sources */,
-				961BF9A8216CACF00089F92E /* RegisterResponse.swift in Sources */,
 				96850805216B048A00FC84F4 /* ViewController.swift in Sources */,
 				961BF99F216CA2020089F92E /* LoginViewController.swift in Sources */,
+				0EED345E216D29C400B8B263 /* CommonResponse.swift in Sources */,
 				96850817216B0FD200FC84F4 /* APIRouter.swift in Sources */,
 				961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */,
 				961BF99D216CA1E70089F92E /* MGConnection.swift in Sources */,
@@ -431,7 +427,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C99TY569A;
+				DEVELOPMENT_TEAM = VU9S46VYTD;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,7 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C99TY569A;
+				DEVELOPMENT_TEAM = VU9S46VYTD;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

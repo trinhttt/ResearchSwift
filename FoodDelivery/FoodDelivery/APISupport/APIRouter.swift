@@ -39,9 +39,7 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
     case register(email: String, password: String)
     private var method: HTTPMethod {
         switch self {
-        case .login:
-            return .post
-        case .register:
+        case .login, .register:
             return .post
         }
     }

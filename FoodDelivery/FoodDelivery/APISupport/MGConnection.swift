@@ -17,21 +17,24 @@ class MGConnection {
         return NetworkReachabilityManager()!.isReachable
     }
     
-    static func request<T: Mappable>(_ apiRouter: APIRouter,_ returnType: T.Type, completion: @escaping (_ result: String?, _ error: ErrorResponse?) -> Void) {
+    static func request(_ apiRouter: APIRouter, completion: @escaping (_ result: Any?, _ error: ErrorResponse?) -> Void) {
         if !isConnectedToInternet() {
             print("Cant't connect internet!")// Xử lý khi lỗi kết nối internet
             
             return
         }
         
-        Alamofire.request(apiRouter).responseObject{(response: DataResponse<LoginResponse>) in
+        Alamofire.request(apiRouter).responseObject{(response: DataResponse<CommonResponse>) in//AlamofireObjectMapper
             switch response.result {
             case .success:
+                print(response.result)
+                print(response.result.value)
+                print(response.response?.statusCode)
+
                 if response.response?.statusCode == 200 {
                     // print(response.result.value?.msg as Any)
-                    //print(response.result.value?.token as Any)
                     
-                    completion((response.result.value?.msg), nil)
+                    completion((response.result.value), nil)
                 } else {
                     let err: ErrorResponse = ErrorResponse.init(NetworkErrorType.HTTP_ERROR, (response.response?.statusCode)!, "Request is error!")
                     completion(nil, err)
