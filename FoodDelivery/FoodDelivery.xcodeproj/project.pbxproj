@@ -7,27 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E042375216BA5A30042F15F /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E042374216BA5A30042F15F /* BaseResponse.swift */; };
-		0E042377216BB0660042F15F /* MGConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E042376216BB0660042F15F /* MGConnection.swift */; };
-		961BF994216C90A60089F92E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF993216C90A60089F92E /* AccountViewController.swift */; };
-		961BF997216C91D30089F92E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF996216C91D30089F92E /* LoginPresenter.swift */; };
+		961BF99B216CA1CD0089F92E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99A216CA1CD0089F92E /* LoginResponse.swift */; };
+		961BF99D216CA1E70089F92E /* MGConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99C216CA1E70089F92E /* MGConnection.swift */; };
+		961BF99F216CA2020089F92E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF99E216CA2020089F92E /* LoginViewController.swift */; };
+		961BF9A1216CA2140089F92E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A0216CA2140089F92E /* LoginPresenter.swift */; };
+		961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A5216CA9580089F92E /* RegisterViewController.swift */; };
+		961BF9A8216CACF00089F92E /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A7216CACF00089F92E /* RegisterResponse.swift */; };
+		961BF9AA216CAD9C0089F92E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */; };
+		961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */; };
 		96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850802216B048A00FC84F4 /* AppDelegate.swift */; };
 		96850805216B048A00FC84F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850804216B048A00FC84F4 /* ViewController.swift */; };
 		96850808216B048B00FC84F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96850806216B048B00FC84F4 /* Main.storyboard */; };
 		9685080A216B049300FC84F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96850809216B049300FC84F4 /* Assets.xcassets */; };
 		9685080D216B049300FC84F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685080B216B049300FC84F4 /* LaunchScreen.storyboard */; };
-		96850815216B0D8600FC84F4 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850814216B0D8600FC84F4 /* Configs.swift */; };
+		96850815216B0D8600FC84F4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850814216B0D8600FC84F4 /* Common.swift */; };
 		96850817216B0FD200FC84F4 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850816216B0FD200FC84F4 /* APIRouter.swift */; };
 		CFABF3DCDA9B95DACC33C43D /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3136C4D4127A699ADC42DB53 /* Pods_FoodDelivery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E042374216BA5A30042F15F /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
-		0E042376216BB0660042F15F /* MGConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConnection.swift; sourceTree = "<group>"; };
 		114D827A948D3576F498342D /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		3136C4D4127A699ADC42DB53 /* Pods_FoodDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		961BF993216C90A60089F92E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		961BF996216C91D30089F92E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		961BF99A216CA1CD0089F92E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		961BF99C216CA1E70089F92E /* MGConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGConnection.swift; sourceTree = "<group>"; };
+		961BF99E216CA2020089F92E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		961BF9A0216CA2140089F92E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		961BF9A5216CA9580089F92E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		961BF9A7216CACF00089F92E /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 		968507FF216B048A00FC84F4 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96850802216B048A00FC84F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96850804216B048A00FC84F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +43,7 @@
 		96850809216B049300FC84F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9685080C216B049300FC84F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9685080E216B049300FC84F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96850814216B0D8600FC84F4 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		96850814216B0D8600FC84F4 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		96850816216B0FD200FC84F4 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		B6BF28690FAF59D28C924EF5 /* Pods-FoodDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,32 +69,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		961BF995216C91B40089F92E /* Presenter */ = {
+		961BF9A2216CA2790089F92E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				961BF996216C91D30089F92E /* LoginPresenter.swift */,
+				96850814216B0D8600FC84F4 /* Common.swift */,
 			);
-			path = Presenter;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		961BF998216C926A0089F92E /* Controller */ = {
+		961BF9A3216CA2800089F92E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				96850804216B048A00FC84F4 /* ViewController.swift */,
-				961BF993216C90A60089F92E /* AccountViewController.swift */,
+				961BF99E216CA2020089F92E /* LoginViewController.swift */,
+				961BF9A5216CA9580089F92E /* RegisterViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		961BF999216C927C0089F92E /* Utils */ = {
+		961BF9A4216CA2860089F92E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				96850814216B0D8600FC84F4 /* Configs.swift */,
-				0E042374216BA5A30042F15F /* BaseResponse.swift */,
-				96850816216B0FD200FC84F4 /* APIRouter.swift */,
-				0E042376216BB0660042F15F /* MGConnection.swift */,
+				961BF9A0216CA2140089F92E /* LoginPresenter.swift */,
+				961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */,
 			);
-			path = Utils;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		961BF9AB216CAE330089F92E /* APISupport */ = {
+			isa = PBXGroup;
+			children = (
+				961BF9AC216CAE880089F92E /* DataResponse */,
+				96850816216B0FD200FC84F4 /* APIRouter.swift */,
+				961BF99C216CA1E70089F92E /* MGConnection.swift */,
+			);
+			path = APISupport;
+			sourceTree = "<group>";
+		};
+		961BF9AC216CAE880089F92E /* DataResponse */ = {
+			isa = PBXGroup;
+			children = (
+				961BF9A7216CACF00089F92E /* RegisterResponse.swift */,
+				961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */,
+				961BF99A216CA1CD0089F92E /* LoginResponse.swift */,
+			);
+			path = DataResponse;
 			sourceTree = "<group>";
 		};
 		968507F6216B048A00FC84F4 = {
@@ -110,9 +137,10 @@
 		96850801216B048A00FC84F4 /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
-				961BF999216C927C0089F92E /* Utils */,
-				961BF998216C926A0089F92E /* Controller */,
-				961BF995216C91B40089F92E /* Presenter */,
+				961BF9AB216CAE330089F92E /* APISupport */,
+				961BF9A4216CA2860089F92E /* Presenter */,
+				961BF9A3216CA2800089F92E /* Controller */,
+				961BF9A2216CA2790089F92E /* Utils */,
 				96850802216B048A00FC84F4 /* AppDelegate.swift */,
 				96850806216B048B00FC84F4 /* Main.storyboard */,
 				96850809216B049300FC84F4 /* Assets.xcassets */,
@@ -246,14 +274,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961BF997216C91D30089F92E /* LoginPresenter.swift in Sources */,
-				0E042375216BA5A30042F15F /* BaseResponse.swift in Sources */,
+				961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */,
+				961BF9A1216CA2140089F92E /* LoginPresenter.swift in Sources */,
+				961BF99B216CA1CD0089F92E /* LoginResponse.swift in Sources */,
+				961BF9A8216CACF00089F92E /* RegisterResponse.swift in Sources */,
 				96850805216B048A00FC84F4 /* ViewController.swift in Sources */,
-				961BF994216C90A60089F92E /* AccountViewController.swift in Sources */,
+				961BF99F216CA2020089F92E /* LoginViewController.swift in Sources */,
 				96850817216B0FD200FC84F4 /* APIRouter.swift in Sources */,
-				0E042377216BB0660042F15F /* MGConnection.swift in Sources */,
+				961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */,
+				961BF99D216CA1E70089F92E /* MGConnection.swift in Sources */,
+				961BF9AA216CAD9C0089F92E /* ErrorResponse.swift in Sources */,
 				96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */,
-				96850815216B0D8600FC84F4 /* Configs.swift in Sources */,
+				96850815216B0D8600FC84F4 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

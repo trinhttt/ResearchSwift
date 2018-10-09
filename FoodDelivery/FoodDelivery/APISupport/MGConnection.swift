@@ -17,10 +17,10 @@ class MGConnection {
         return NetworkReachabilityManager()!.isReachable
     }
     
-    static func request<T: Mappable>(_ apiRouter: APIRouter,_ returnType: T.Type, completion: @escaping (_ result: String?, _ error: LoginResponseError?) -> Void) {
+    static func request<T: Mappable>(_ apiRouter: APIRouter,_ returnType: T.Type, completion: @escaping (_ result: String?, _ error: ErrorResponse?) -> Void) {
         if !isConnectedToInternet() {
             print("Cant't connect internet!")// Xử lý khi lỗi kết nối internet
-
+            
             return
         }
         
@@ -28,19 +28,19 @@ class MGConnection {
             switch response.result {
             case .success:
                 if response.response?.statusCode == 200 {
-                   // print(response.result.value?.msg as Any)
+                    // print(response.result.value?.msg as Any)
                     //print(response.result.value?.token as Any)
-
-                    completion((response.result.value?.msg ), nil)
+                    
+                    completion((response.result.value?.msg), nil)
                 } else {
-                    let err: LoginResponseError = LoginResponseError.init(NetworkErrorType.HTTP_ERROR, (response.response?.statusCode)!, "Request is error!")
+                    let err: ErrorResponse = ErrorResponse.init(NetworkErrorType.HTTP_ERROR, (response.response?.statusCode)!, "Request is error!")
                     completion(nil, err)
                 }
                 break
                 
             case .failure(let error):
                 if error is AFError {
-                    let err: LoginResponseError = LoginResponseError.init(NetworkErrorType.HTTP_ERROR, error._code, "Request is error!")
+                    let err: ErrorResponse = ErrorResponse.init(NetworkErrorType.HTTP_ERROR, error._code, "Request is error!")
                     completion(nil, err)
                 }
                 

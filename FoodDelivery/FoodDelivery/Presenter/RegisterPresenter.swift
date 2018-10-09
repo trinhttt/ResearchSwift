@@ -1,5 +1,5 @@
 //
-//  LoginPresenter.swift
+//  RegisterPresenter.swift
 //  FoodDelivery
 //
 //  Created by Thai Thi Tu Trinh on 10/9/18.
@@ -7,25 +7,20 @@
 //
 
 import Foundation
-
-//"trinh.ttt@aris-vn.com"
-//"123456"
-protocol LoginProtocol {
+protocol RegisterProtocol {
     func loginSuccessful(isSuccessful: Bool)
 }
 
-class LoginPresenter {
-    var delegate: LoginProtocol!
-    func Login(_ emailParam: String,_ passwordParam: String) {
-        MGConnection.request(APIRouter.login(email: emailParam, password: passwordParam), LoginResponse.self,
+class RegisterPresenter {
+    var delegate: RegisterProtocol!
+    func Register(_ emailParam: String,_ passwordParam: String) {
+        MGConnection.request(APIRouter.register(email: emailParam, password: passwordParam), RegisterResponse.self,
                              completion: {(result, err) in
                                 guard err == nil else {
                                     print("False with code: \(err?.mErrorCode) and message: \(err?.mErrorMessage)")
                                     self.delegate.loginSuccessful(isSuccessful: false)
                                     return
                                 }
-                                
-                                //print(result)
                                 
                                 self.delegate.loginSuccessful(isSuccessful: true)
                                 

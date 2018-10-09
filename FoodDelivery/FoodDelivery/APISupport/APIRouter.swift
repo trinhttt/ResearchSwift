@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
-
+    
     func asURLRequest() throws -> URLRequest {
         let url = try Production.BASE_URL.asURL()
         var urlRequest: URLRequest = URLRequest(url: url.appendingPathComponent(path))// setting path
@@ -36,10 +36,12 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
     
     // define api
     case login(email: String, password: String)
-    
+    case register(email: String, password: String)
     private var method: HTTPMethod {
         switch self {
         case .login:
+            return .post
+        case .register:
             return .post
         }
     }
@@ -48,21 +50,30 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
         switch self {
         case .login:
             return "login"
+        case .register:
+            return "register"
         }
     }
-        
+    
     private var headers: HTTPHeaders {
         let headers = ["Accept": "application/json"]
         switch self {
         case .login:
             break
+        case .register:
+            break
         }
         return headers
-
+        
     }
     private var parameters: Parameters? {
         switch self {
         case .login(let email, let password):
+            return [
+                "email": email,
+                "password": password
+            ]
+        case .register(let email, let password):
             return [
                 "email": email,
                 "password": password

@@ -9,28 +9,15 @@
 import UIKit
 class ViewController: UIViewController {
 
-    var presenter: LoginPresenter!
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = LoginPresenter()
-        presenter.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.Login()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-
-}
-
-extension ViewController: LoginProtocol{
     
-    func loginSuccessful(state: Bool) {
-        if state == true {
-            print("Login successfully1")
-        }
-    }
+    
 }

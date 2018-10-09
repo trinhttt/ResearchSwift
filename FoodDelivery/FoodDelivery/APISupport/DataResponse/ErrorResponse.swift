@@ -1,29 +1,14 @@
 //
-//  BaseResponse.swift
+//  ErrorResponse.swift
 //  FoodDelivery
 //
-//  Created by Trinh Thai on 10/8/18.
+//  Created by Thai Thi Tu Trinh on 10/9/18.
 //  Copyright © 2018 Thai Thi Tu Trinh. All rights reserved.
 //
 
 import Foundation
-import ObjectMapper
 
-class LoginResponse: Mappable {
-    var msg: String?
-    var token: String?
-    
-    required init?(map: Map) {
-    }
-    
-    func mapping(map: Map) {
-        msg <- map["msg"]
-        token <- map["token"]
-    }
-}
-
-
-class LoginResponseError {
+class ErrorResponse {
     var mErrorType: NetworkErrorType!
     var mErrorCode: Int!
     var mErrorMessage: String!
