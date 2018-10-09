@@ -9,25 +9,21 @@
 import Foundation
 import ObjectMapper
 
-class BaseResponse<T: Mappable>: Mappable {
-    var status: Int?
-    var data: T?
+class LoginResponse: Mappable {
+    var msg: String?
+    var token: String?
     
     required init?(map: Map) {
     }
     
     func mapping(map: Map) {
-        status <- map["status"]
-        data <- map["data"]
-    }
-    
-    func isSuccessCode() -> Bool? {
-        return status == 200
+        msg <- map["msg"]
+        token <- map["token"]
     }
 }
 
 
-class BaseResponseError {
+class LoginResponseError {
     var mErrorType: NetworkErrorType!
     var mErrorCode: Int!
     var mErrorMessage: String!

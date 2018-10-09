@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "0940"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8789CA7B2B42B8E9ACF74FC04C43753"
-               BuildableName = "Pods_FoodDelivery.framework"
-               BlueprintName = "Pods-FoodDelivery"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "968507FE216B048A00FC84F4"
+               BuildableName = "FoodDelivery.app"
+               BlueprintName = "FoodDelivery"
+               ReferencedContainer = "container:FoodDelivery.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "968507FE216B048A00FC84F4"
+            BuildableName = "FoodDelivery.app"
+            BlueprintName = "FoodDelivery"
+            ReferencedContainer = "container:FoodDelivery.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,23 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8789CA7B2B42B8E9ACF74FC04C43753"
-            BuildableName = "Pods_FoodDelivery.framework"
-            BlueprintName = "Pods-FoodDelivery"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "968507FE216B048A00FC84F4"
+            BuildableName = "FoodDelivery.app"
+            BlueprintName = "FoodDelivery"
+            ReferencedContainer = "container:FoodDelivery.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +77,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "968507FE216B048A00FC84F4"
+            BuildableName = "FoodDelivery.app"
+            BlueprintName = "FoodDelivery"
+            ReferencedContainer = "container:FoodDelivery.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
