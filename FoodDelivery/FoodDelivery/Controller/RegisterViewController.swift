@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
             Common.displayAlert(info: "Nhập lại mật khẩu không khớp!",view:self)
             return
         }
-        presenter.Register(ibEmail.text!, ibPassword.text!)
+        presenter.userRegister(ibEmail.text!, ibPassword.text!)
     }
 }
 

@@ -14,8 +14,13 @@
 		961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A5216CA9580089F92E /* RegisterViewController.swift */; };
 		961BF9AA216CAD9C0089F92E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */; };
 		961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */; };
+		9655A26C2182C47100652C40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A26B2182C47100652C40 /* HomeViewController.swift */; };
+		9655A26E2182CD4200652C40 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A26D2182CD4200652C40 /* Extension.swift */; };
+		9655A2712182FA6800652C40 /* FoodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A2702182FA6800652C40 /* FoodPresenter.swift */; };
+		9655A274218303E400652C40 /* AllFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A273218303E400652C40 /* AllFoodViewController.swift */; };
+		9655A276218319C800652C40 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A275218319C800652C40 /* RestaurantViewController.swift */; };
+		9655A27821831A5600652C40 /* RestaurantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655A27721831A5600652C40 /* RestaurantPresenter.swift */; };
 		96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850802216B048A00FC84F4 /* AppDelegate.swift */; };
-		96850805216B048A00FC84F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96850804216B048A00FC84F4 /* ViewController.swift */; };
 		96850808216B048B00FC84F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96850806216B048B00FC84F4 /* Main.storyboard */; };
 		9685080A216B049300FC84F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96850809216B049300FC84F4 /* Assets.xcassets */; };
 		9685080D216B049300FC84F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9685080B216B049300FC84F4 /* LaunchScreen.storyboard */; };
@@ -34,9 +39,14 @@
 		961BF9A5216CA9580089F92E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		961BF9A9216CAD9C0089F92E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		9655A26B2182C47100652C40 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9655A26D2182CD4200652C40 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9655A2702182FA6800652C40 /* FoodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPresenter.swift; sourceTree = "<group>"; };
+		9655A273218303E400652C40 /* AllFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFoodViewController.swift; sourceTree = "<group>"; };
+		9655A275218319C800652C40 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		9655A27721831A5600652C40 /* RestaurantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantPresenter.swift; sourceTree = "<group>"; };
 		968507FF216B048A00FC84F4 /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96850802216B048A00FC84F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96850804216B048A00FC84F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		96850807216B048B00FC84F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96850809216B049300FC84F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9685080C216B049300FC84F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				96850814216B0D8600FC84F4 /* Common.swift */,
+				9655A26D2182CD4200652C40 /* Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -78,9 +89,10 @@
 		961BF9A3216CA2800089F92E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				96850804216B048A00FC84F4 /* ViewController.swift */,
+				9655A272218303B900652C40 /* Home Child */,
 				961BF99E216CA2020089F92E /* LoginViewController.swift */,
 				961BF9A5216CA9580089F92E /* RegisterViewController.swift */,
+				9655A26B2182C47100652C40 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -90,6 +102,8 @@
 			children = (
 				961BF9A0216CA2140089F92E /* LoginPresenter.swift */,
 				961BF9AD216CB0D40089F92E /* RegisterPresenter.swift */,
+				9655A2702182FA6800652C40 /* FoodPresenter.swift */,
+				9655A27721831A5600652C40 /* RestaurantPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -111,6 +125,15 @@
 				0EED345D216D29C400B8B263 /* CommonResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		9655A272218303B900652C40 /* Home Child */ = {
+			isa = PBXGroup;
+			children = (
+				9655A273218303E400652C40 /* AllFoodViewController.swift */,
+				9655A275218319C800652C40 /* RestaurantViewController.swift */,
+			);
+			path = "Home Child";
 			sourceTree = "<group>";
 		};
 		968507F6216B048A00FC84F4 = {
@@ -272,16 +295,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				961BF9A6216CA9580089F92E /* RegisterViewController.swift in Sources */,
+				9655A276218319C800652C40 /* RestaurantViewController.swift in Sources */,
 				961BF9A1216CA2140089F92E /* LoginPresenter.swift in Sources */,
-				96850805216B048A00FC84F4 /* ViewController.swift in Sources */,
 				961BF99F216CA2020089F92E /* LoginViewController.swift in Sources */,
+				9655A2712182FA6800652C40 /* FoodPresenter.swift in Sources */,
+				9655A27821831A5600652C40 /* RestaurantPresenter.swift in Sources */,
+				9655A26E2182CD4200652C40 /* Extension.swift in Sources */,
 				0EED345E216D29C400B8B263 /* CommonResponse.swift in Sources */,
+				9655A274218303E400652C40 /* AllFoodViewController.swift in Sources */,
 				96850817216B0FD200FC84F4 /* APIRouter.swift in Sources */,
 				961BF9AE216CB0D40089F92E /* RegisterPresenter.swift in Sources */,
 				961BF99D216CA1E70089F92E /* MGConnection.swift in Sources */,
 				961BF9AA216CAD9C0089F92E /* ErrorResponse.swift in Sources */,
 				96850803216B048A00FC84F4 /* AppDelegate.swift in Sources */,
 				96850815216B0D8600FC84F4 /* Common.swift in Sources */,
+				9655A26C2182C47100652C40 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VU9S46VYTD;
+				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VU9S46VYTD;
+				DEVELOPMENT_TEAM = 6C99TY569A;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

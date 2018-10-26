@@ -23,6 +23,8 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
         if let parameters = parameters {
             do {
                 urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+                print(urlRequest)
+
             } catch {
                 print("Encoding fail")
             }
@@ -34,25 +36,40 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
         return "Authorization token"
     }
     
-    // define api
+    // MARK: - define api
+    
+    //Action
     case login(email: String, password: String)
     case register(email: String, password: String)
+    case getAllFood(foodname: String)
+    case getRestaurantMenu(id: Int)
+    //Method
     private var method: HTTPMethod {
         switch self {
         case .login, .register:
             return .post
+        case .getAllFood:
+            return .get
+        case .getRestaurantMenu:
+            return .get
         }
     }
     
+    //Path
     private var path: String {
         switch self {
         case .login:
             return "login"
         case .register:
             return "register"
+        case .getAllFood:
+            return "food/searchfood"
+        case .getRestaurantMenu:
+            return "restaurant/getMenu/:id"
         }
     }
     
+    //Header
     private var headers: HTTPHeaders {
         let headers = ["Accept": "application/json"]
         switch self {
@@ -60,10 +77,17 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
             break
         case .register:
             break
+        case .getAllFood:
+            break
+        case .getRestaurantMenu:
+            break
         }
+        
         return headers
         
     }
+    
+    //Param
     private var parameters: Parameters? {
         switch self {
         case .login(let email, let password):
@@ -75,6 +99,14 @@ enum APIRouter: URLRequestConvertible{    //ke thua tu protocol
             return [
                 "email": email,
                 "password": password
+            ]
+        case .getAllFood(let foodname):
+            return [
+                "foodname": foodname
+            ]
+        case .getRestaurantMenu(let id):
+            return [
+                "id": id
             ]
         }
     }

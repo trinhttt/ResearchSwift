@@ -13,7 +13,7 @@ protocol RegisterProtocol {
 
 class RegisterPresenter {
     var delegate: RegisterProtocol!
-    func Register(_ emailParam: String,_ passwordParam: String) {
+    func userRegister(_ emailParam: String,_ passwordParam: String) {
         MGConnection.request(APIRouter.register(email: emailParam, password: passwordParam),
                              completion: {(result, err) in
                                 guard err == nil else {

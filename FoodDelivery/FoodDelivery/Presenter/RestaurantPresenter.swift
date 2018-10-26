@@ -1,33 +1,30 @@
 //
-//  LoginPresenter.swift
+//  RestaurantPresenter.swift
 //  FoodDelivery
 //
-//  Created by Thai Thi Tu Trinh on 10/9/18.
+//  Created by Thai Thi Tu Trinh on 10/26/18.
 //  Copyright © 2018 Thai Thi Tu Trinh. All rights reserved.
 //
 
 import Foundation
-
-//"ttttrinh132@gmail.com"
-//"123456"
-protocol LoginProtocol {
-    func loginSuccessful(isSuccessful: Bool)
+protocol RestaurantProtocol {
+    func getRestaurantInfoSuccessful(isSuccessful: Bool)
 }
 
-class LoginPresenter {
-    var delegate: LoginProtocol!
-    func userLogin(_ emailParam: String,_ passwordParam: String) {
-        MGConnection.request(APIRouter.login(email: emailParam, password: passwordParam),
+class RestaurantPresenter {
+    var delegate: RestaurantProtocol!
+    func getRestaurantInfo(_ id: Int) {
+        MGConnection.request(APIRouter.getRestaurantMenu(id:id),
                              completion: {(result, err) in
                                 
                                 guard err == nil else {
                                     print("False with code: \(String(describing: err?.mErrorCode)) and message: \(String(describing: err?.mErrorMessage))")
-                                    self.delegate.loginSuccessful(isSuccessful: false)
+                                    self.delegate.getRestaurantInfoSuccessful(isSuccessful: false)
                                     return
                                 }
                                 
                                 print(result as Any)
-                                self.delegate.loginSuccessful(isSuccessful: true)
+                                self.delegate.getRestaurantInfoSuccessful(isSuccessful: true)
                                 
         })
         

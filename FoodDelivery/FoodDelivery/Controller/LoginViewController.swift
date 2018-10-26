@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
             Common.displayAlert(info: "Vui lòng nhập đầy đủ thông tin!",view:self)
             return
         }
-        presenter.Login(ibEmail.text!, ibPassword.text!)
+        presenter.userLogin(ibEmail.text!, ibPassword.text!)
 
     }
     
@@ -46,7 +46,9 @@ extension LoginViewController: LoginProtocol{
     
     func loginSuccessful(isSuccessful: Bool) {
         if isSuccessful {
-            Common.displayAlert(info: "Đăng nhập thành công",view:self)
+//            Common.displayAlert(info: "Đăng nhập thành công",view:self)
+            let viewController : HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            self.present(viewController, animated: true)
         }else{
             Common.displayAlert(info: "Email hoặc mật khẩu sai!",view:self)
         }
